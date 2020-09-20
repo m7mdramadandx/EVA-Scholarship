@@ -17,7 +17,7 @@ class _LandingPageState extends State<LandingPage> {
   Widget build(BuildContext context) {
     return StreamBuilder<String>(
       builder: (context, AsyncSnapshot<String> snapshot) {
-        return Scaffold(backgroundColor: primaryColor);
+        return Scaffold(backgroundColor: kPrimaryColor);
       },
     );
   }

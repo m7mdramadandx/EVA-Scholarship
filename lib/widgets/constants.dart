@@ -14,7 +14,9 @@ Widget MyAppBar(BuildContext context, String title) {
         child: new Text(
           title,
           style: new TextStyle(
-              fontSize: 24.0, fontWeight: FontWeight.w500, color: primaryColor),
+              fontSize: 24.0,
+              fontWeight: FontWeight.w500,
+              color: kPrimaryColor),
         ),
       ),
       decoration: new BoxDecoration(
@@ -73,13 +75,13 @@ const kTitleTextStyle = TextStyle(
 const title = TextStyle(
   fontSize: 28.0,
   fontFamily: 'Cairo',
-  color: primaryColor,
+  color: kPrimaryColor,
   fontWeight: FontWeight.bold,
 );
 const subtitle = TextStyle(
   fontSize: 22.0,
   fontFamily: 'Cairo',
-  color: primaryColor,
+  color: kPrimaryColor,
   fontWeight: FontWeight.bold,
 );
 const normalText = TextStyle(
@@ -91,7 +93,7 @@ const normalText = TextStyle(
 const smallText = TextStyle(
   fontSize: 12.0,
   fontFamily: 'Cairo',
-  color: primaryColor,
+  color: kPrimaryColor,
 );
 
 const kSloganTextStyle = TextStyle(
@@ -104,7 +106,7 @@ const kSloganTextStyle = TextStyle(
 const kStepsFontStyle = TextStyle(
   fontSize: 18.0,
   fontFamily: 'Cairo',
-  color: primaryColor,
+  color: kPrimaryColor,
   fontWeight: FontWeight.bold,
 );
 
@@ -140,7 +142,7 @@ const kRoundedDecoration = InputDecoration(
     borderRadius: BorderRadius.all(Radius.circular(10)),
   ),
   focusedBorder: OutlineInputBorder(
-    borderSide: BorderSide(color: primaryColor, width: 2),
+    borderSide: BorderSide(color: kPrimaryColor, width: 2),
     borderRadius: BorderRadius.all(Radius.circular(10)),
   ),
 );

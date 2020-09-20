@@ -3,7 +3,7 @@ import 'dart:ui';
 import 'package:circular_bottom_navigation/circular_bottom_navigation.dart';
 import 'package:circular_bottom_navigation/tab_item.dart';
 import 'package:eva_pharma/screens/Dashboard.dart';
-import 'package:eva_pharma/screens/Scholarship.dart';
+import 'package:eva_pharma/screens/Explore.dart';
 import 'package:eva_pharma/widgets/colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -18,15 +18,15 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   List<TabItem> tabItems = List.of([
-    new TabItem(CupertinoIcons.home, "Dashboard", primaryColor,
+    new TabItem(CupertinoIcons.home, "Dashboard", kPrimaryColor,
         labelStyle: TextStyle(fontWeight: FontWeight.w500)),
-    new TabItem(CupertinoIcons.search, "Explore", primaryColor,
+    new TabItem(CupertinoIcons.search, "Explore", kPrimaryColor,
         labelStyle: TextStyle(fontWeight: FontWeight.w500)),
-    new TabItem(CupertinoIcons.heart, "Favorite", primaryColor,
+    new TabItem(CupertinoIcons.heart, "Favorite", kPrimaryColor,
         labelStyle: TextStyle(fontWeight: FontWeight.w500)),
-    new TabItem(CupertinoIcons.bell, "Notifications", primaryColor,
+    new TabItem(CupertinoIcons.bell, "Notifications", kPrimaryColor,
         labelStyle: TextStyle(fontWeight: FontWeight.w500)),
-    new TabItem(CupertinoIcons.profile_circled, "Profile", primaryColor,
+    new TabItem(CupertinoIcons.profile_circled, "Profile", kPrimaryColor,
         labelStyle: TextStyle(fontWeight: FontWeight.w500)),
   ]);
 
@@ -51,15 +51,13 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
     checkInternet();
-    return SafeArea(
-      child: Scaffold(
-        body: Stack(
-          children: [
-            MainWidget(),
-            Align(alignment: Alignment.bottomCenter, child: bottomNav()),
-          ],
-        ), // bottomSheet: bottomNav(),
-      ),
+    return Scaffold(
+      body: Stack(
+        children: [
+          MainWidget(),
+          Align(alignment: Alignment.bottomCenter, child: bottomNav()),
+        ],
+      ), // bottomSheet: bottomNav(),
     );
   }
 

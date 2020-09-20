@@ -1,5 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:eva_pharma/models/scholarship.dart';
+import 'package:eva_pharma/models/opportunity.dart';
 import 'package:eva_pharma/widgets/colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -22,7 +22,6 @@ class CustomListView extends StatelessWidget {
                 title,
                 style: TextStyle(
                   fontSize: 22.0,
-                  fontWeight: FontWeight.bold,
                   letterSpacing: 1.5,
                 ),
               ),
@@ -42,9 +41,9 @@ class CustomListView extends StatelessWidget {
           height: 300.0,
           child: ListView.builder(
             scrollDirection: Axis.horizontal,
-            itemCount: scholarship.length,
+            itemCount: opportunityList.length,
             itemBuilder: (BuildContext context, int index) {
-              Scholarship _scholarship = scholarship[index];
+              Opportunity _opportunity = opportunityList[index];
               return Container(
                 margin: EdgeInsets.all(12.0),
                 width: 250.0,
@@ -68,21 +67,23 @@ class CustomListView extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
                               Text(
-                                'University',
+                                _opportunity.title,
                                 style: TextStyle(
                                   fontSize: 22.0,
                                   fontWeight: FontWeight.w600,
-                                  color: primaryColor,
+                                  color: kPrimaryColor,
                                   letterSpacing: 1.2,
                                 ),
+                                maxLines: 2,
+                                overflow: TextOverflow.clip,
                               ),
                               SizedBox(height: 8),
                               Text(
-                                _scholarship.field,
+                                _opportunity.field,
                               ),
                               SizedBox(height: 4),
                               Text(
-                                _scholarship.description,
+                                _opportunity.description,
                                 style: TextStyle(color: Colors.grey),
                               ),
                             ],
@@ -95,7 +96,7 @@ class CustomListView extends StatelessWidget {
                       child: Stack(
                         children: <Widget>[
                           CachedNetworkImage(
-                            imageUrl: _scholarship.imageUrl,
+                            imageUrl: _opportunity.imageUrl,
                             width: 260,
                             height: 160,
                             imageBuilder: (context, imageProvider) => Container(
@@ -115,7 +116,7 @@ class CustomListView extends StatelessWidget {
                             left: 10.0,
                             bottom: 10.0,
                             child: Text(
-                              _scholarship.type,
+                              _opportunity.type,
                               style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 24.0,
@@ -136,7 +137,7 @@ class CustomListView extends StatelessWidget {
                                 child: Row(
                                   children: [
                                     Text(
-                                      _scholarship.rate.toString(),
+                                      _opportunity.rate.toString(),
                                       style: TextStyle(
                                         color: Colors.white,
                                         fontSize: 18.0,

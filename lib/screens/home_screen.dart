@@ -27,7 +27,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 'Welcome To Eva Scholarship',
                 style: TextStyle(
                   fontSize: 30.0,
-                  color: primaryColor,
+                  color: kPrimaryColor,
                   fontWeight: FontWeight.bold,
                 ),
               ),

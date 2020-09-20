@@ -19,7 +19,7 @@ dependencies:
   flutter_slider_drawer: ^1.0.3
   font_awesome_flutter: ^8.8.1
   cached_network_image: ^2.3.2+1
-  flappy_search_bar: 1.4.1
+#  flappy_search_bar: 1.4.1
 
 
 
