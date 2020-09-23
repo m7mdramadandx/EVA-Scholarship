@@ -2,39 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="193371d1-6f89-4d27-b5e7-5d2b84c527ae" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/models/Benefits.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/models/Eligibility.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/models/RequiredDegree.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/models/RequiredHighSchoolDegree.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/models/RequiredTests.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/screens/Notifications.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/screens/Profile.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/widgets/DropDown.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/widgets/MutiSelectChips.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/widgets/OppCard.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/widgets/OppLightCard.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/widgets/OppTypes.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/widgets/PrimaryOppInfo.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/widgets/SecondryOppInfo.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/models/Menu.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/models/Menu.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/models/opportunity.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/models/opportunity.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/Dashboard.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/Dashboard.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/Explore.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/Explore.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/Favorite.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/Favorite.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/Search.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/components/body.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/components/title_price_rating.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/details-screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/OppInfoScreen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/home.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/Home.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/home_screen.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/widgets/Categories.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/widgets/CustomListView.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/widgets/CustomListView.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/widgets/OpportunityCard.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/widgets/colors.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/widgets/colors.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/widgets/constants.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/widgets/constants.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/widgets/SwiperWidget.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,6 +70,11 @@
       <recent name="D:\flutterProjects\eva_pharma" />
     </key>
   </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="flutter test --coverage " />
+    </option>
+  </component>
   <component name="RunManager">
     <configuration name="main.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
       <option name="filePath" value="$PROJECT_DIR$/lib/main.dart" />
@@ -146,22 +124,22 @@
       <screen x="0" y="30" width="1536" height="834" />
     </state>
     <state x="272" y="190" key="FileChooserDialogImpl/0.30.1536.834@0.30.1536.834" timestamp="1600427989397" />
-    <state width="1138" height="211" key="GridCell.Tab.0.bottom" timestamp="1600867898947">
+    <state width="1138" height="211" key="GridCell.Tab.0.bottom" timestamp="1600900865191">
       <screen x="0" y="30" width="1536" height="834" />
     </state>
-    <state width="1138" height="211" key="GridCell.Tab.0.bottom/0.30.1536.834@0.30.1536.834" timestamp="1600867898947" />
-    <state width="1138" height="211" key="GridCell.Tab.0.center" timestamp="1600867898947">
+    <state width="1138" height="211" key="GridCell.Tab.0.bottom/0.30.1536.834@0.30.1536.834" timestamp="1600900865191" />
+    <state width="1138" height="211" key="GridCell.Tab.0.center" timestamp="1600900865191">
       <screen x="0" y="30" width="1536" height="834" />
     </state>
-    <state width="1138" height="211" key="GridCell.Tab.0.center/0.30.1536.834@0.30.1536.834" timestamp="1600867898947" />
-    <state width="1138" height="211" key="GridCell.Tab.0.left" timestamp="1600867898946">
+    <state width="1138" height="211" key="GridCell.Tab.0.center/0.30.1536.834@0.30.1536.834" timestamp="1600900865191" />
+    <state width="1138" height="211" key="GridCell.Tab.0.left" timestamp="1600900865190">
       <screen x="0" y="30" width="1536" height="834" />
     </state>
-    <state width="1138" height="211" key="GridCell.Tab.0.left/0.30.1536.834@0.30.1536.834" timestamp="1600867898946" />
-    <state width="1138" height="211" key="GridCell.Tab.0.right" timestamp="1600867898947">
+    <state width="1138" height="211" key="GridCell.Tab.0.left/0.30.1536.834@0.30.1536.834" timestamp="1600900865190" />
+    <state width="1138" height="211" key="GridCell.Tab.0.right" timestamp="1600900865191">
       <screen x="0" y="30" width="1536" height="834" />
     </state>
-    <state width="1138" height="211" key="GridCell.Tab.0.right/0.30.1536.834@0.30.1536.834" timestamp="1600867898947" />
+    <state width="1138" height="211" key="GridCell.Tab.0.right/0.30.1536.834@0.30.1536.834" timestamp="1600900865191" />
     <state x="145" y="30" key="SettingsEditor" timestamp="1600346539006">
       <screen x="0" y="30" width="1536" height="834" />
     </state>
@@ -174,10 +152,10 @@
       <screen x="0" y="30" width="1536" height="834" />
     </state>
     <state x="155" y="68" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.30.1536.834@0.30.1536.834" timestamp="1600677095155" />
-    <state x="251" y="210" width="672" height="677" key="run.anything.popup" timestamp="1600862772096">
+    <state x="251" y="210" width="672" height="677" key="run.anything.popup" timestamp="1600903531828">
       <screen x="0" y="30" width="1536" height="834" />
     </state>
-    <state x="251" y="210" width="672" height="677" key="run.anything.popup/0.30.1536.834@0.30.1536.834" timestamp="1600862772096" />
+    <state x="251" y="210" width="672" height="677" key="run.anything.popup/0.30.1536.834@0.30.1536.834" timestamp="1600903531828" />
     <state x="258" y="186" width="672" height="678" key="search.everywhere.popup" timestamp="1600605224911">
       <screen x="0" y="30" width="1536" height="834" />
     </state>
