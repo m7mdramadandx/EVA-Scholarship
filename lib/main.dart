@@ -1,7 +1,8 @@
-import 'package:eva_pharma/screens/home.dart';
-import 'package:eva_pharma/widgets/colors.dart';
+import 'package:eva_pharma/screens/Home.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+
+import 'widgets/colors.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -22,15 +23,21 @@ class EvaPharma extends StatelessWidget {
           accentColor: Color(0xffcdcdcd),
           primaryColorLight: Color(0xff005691),
           scaffoldBackgroundColor: silver,
-          // iconTheme: IconThemeData(color: Colors.grey),
-          // accentIconTheme: IconThemeData(color: Colors.grey),
-          // primaryIconTheme: IconThemeData(color: Colors.grey),
+          // iconTheme: IconThemeData(color: Colors.kGreyColor),
+          // accentIconTheme: IconThemeData(color: Colors.kGreyColor),
+          // primaryIconTheme: IconThemeData(color: Colors.kGreyColor),
           appBarTheme: AppBarTheme(
               color: Colors.white,
               elevation: 16,
-              shadowColor: grey,
-              iconTheme: IconThemeData(color: Colors.grey))),
-      home: Home(),
+              shadowColor: kGreyColor,
+              textTheme: TextTheme(
+                  title: TextStyle(
+                      color: kPrimaryColor,
+                      fontSize: 21,
+                      letterSpacing: 1,
+                      fontWeight: FontWeight.w500)),
+              iconTheme: IconThemeData(color: kGreyColor))),
+      home: HomeScreen(),
     );
   }
 }

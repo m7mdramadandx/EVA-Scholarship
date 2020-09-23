@@ -1,56 +1,54 @@
+import 'package:eva_pharma/models/Benefits.dart';
+import 'package:eva_pharma/models/Eligibility.dart';
+import 'package:eva_pharma/models/RequiredDegree.dart';
+import 'package:eva_pharma/models/RequiredHighSchoolDegree.dart';
+import 'package:eva_pharma/models/RequiredTests.dart';
+
+import 'RequiredHighSchoolDegree.dart';
+
 class Opportunity {
-  String age;
-  String aidCoverage;
-  String applicationProcess;
-  String benefits;
-  String city;
-  String deadline;
-  String description;
-  String duration;
-  String field;
-  String financialAid;
-  String fundingType;
-  String gender;
-  String imageUrl;
-  String ieltsLevel;
-  String moreDetails;
-  String nationality;
-  double rate;
-  String requiredDegree;
-  String requiredDocuments;
-  String requiredEnglishTests;
-  String specialties;
-  String startDate;
-  String title;
-  String toeflLevel;
-  String type;
-  String universityName;
+  final String applicationProcess;
+  List<Benefits> benefits = new List();
+  final String city;
+  final String deadline;
+  final String description;
+  final String duration;
+  List<Eligibility> eligibility = new List();
+  final String financialAid;
+  final String fundingType;
+  final String imageUrl;
+  final String moreDetails;
+  final double rate;
+  List<RequiredDegree> requiredDegree = new List();
+  List<RequiredTests> requiredTests = new List();
+  final String requiredDocuments;
+  List<RequiredSchoolDegree> requiredSchoolDegree = new List();
+  final String specialties;
+  final String startDate;
+  final String title;
+  final String type;
+  final String universityName;
 
   Opportunity({
-    this.age,
-    this.aidCoverage,
     this.applicationProcess,
     this.benefits,
     this.city,
     this.deadline,
     this.description,
     this.duration,
-    this.field,
+    this.eligibility,
     this.financialAid,
     this.fundingType,
-    this.gender,
     this.imageUrl,
-    this.ieltsLevel,
     this.moreDetails,
-    this.nationality,
     this.rate,
     this.requiredDegree,
+    this.requiredTests,
     this.requiredDocuments,
-    this.requiredEnglishTests,
+    this.requiredSchoolDegree,
     this.specialties,
     this.startDate,
     this.title,
-    this.toeflLevel,
     this.type,
     this.universityName,
   });
@@ -58,20 +56,49 @@ class Opportunity {
 
 List<Opportunity> opportunityList = [
   Opportunity(
-    age: '18-24',
     deadline: '31/08/2020',
     title:
         'Nile University_Banque Misr Foundation for Social Development scholarship',
     universityName: 'Nile University',
     city: 'Cairo',
-    field: '',
     fundingType: 'Fully/Partially Funded',
-    gender: 'All',
     imageUrl:
-        'https://marj3.azureedge.net/wp-content/uploads/2020/07/woman-in-black-and-white-stripe-shirt-holding-books-3807735.jpg',
-    toeflLevel: '61/120 MIN Score',
-    ieltsLevel: '6/9 MIN Score',
+        'https://marj3.azureedge.net/wp-content/uploads/2020/04/acc-2017.jpg',
     rate: 4.0,
+    benefits: [
+      Benefits(benefitName: 'Cover Tuition Fees', details: 'Full tuition fee'),
+      Benefits(
+          benefitName: 'Accommodation',
+          details:
+              'Allowance for accommodation in University shared a dormitory'),
+      Benefits(
+          benefitName: 'Salary',
+          details: 'Total Value: \$8,000 as \$2,000 renewable award each year'),
+    ],
+    eligibility: [
+      Eligibility(eligibilityName: 'Age', details: '18-24'),
+      Eligibility(eligibilityName: 'Gender', details: 'All'),
+      Eligibility(eligibilityName: 'Nationality', details: 'Egypt'),
+      Eligibility(
+          eligibilityName: 'Required Languages',
+          details: 'Arabic, English, French'),
+    ],
+    requiredSchoolDegree: [
+      RequiredSchoolDegree(
+          schoolType: 'Thanwya Amma',
+          constrains:
+              '94% MIN. Score Math Division, 90% MIN. Score Arts Division'),
+      RequiredSchoolDegree(
+          schoolType: 'STEM School', constrains: '94% MIN. Score'),
+      RequiredSchoolDegree(
+          schoolType: 'Nile School', constrains: '90% MIN. Score'),
+    ],
+    requiredDegree: [],
+    requiredTests: [
+      RequiredTests(testName: 'IELTS', score: '7/9 MIN. Score'),
+      RequiredTests(testName: 'TOEFL-ITP', score: '500/667 MIN. Score'),
+      RequiredTests(testName: 'TOEFL-IBT', score: '61/120 MIN. Score'),
+    ],
     type: 'Bachelor',
     startDate: '',
     duration: 'More than year',
@@ -83,119 +110,166 @@ List<Opportunity> opportunityList = [
         'Business & Management, Business Studies, Civil Engineering & Construction, Economics, Electronics & Embedded Technology, Engineering & Technology, Entrepreneurship, Finance, General Engineering & Technology, Management, Marketing, Mechanical Engineering, Social Sciences',
   ),
   Opportunity(
-    age: 'Not Specified',
-    deadline: '15/10/2021',
+    deadline: '31/08/2020',
     title:
-        'Cynthia Nelson Endowed Fellowships in Gender and Women’s Studies (IGWS)',
-    city: 'Cairo',
-    universityName: 'AUC',
-    field: '',
-    fundingType: 'Partially Funded',
-    gender: 'All',
-    imageUrl:
-        'https://marj3.azureedge.net/wp-content/uploads/2020/09/Screenshot-540.png ',
-    toeflLevel: '',
-    ieltsLevel: ' ',
-    rate: 4.0,
-    type: 'Fellowships',
-    startDate: '',
-    duration: 'From 6 months to 12 months',
-    moreDetails: ' ',
-    description:
-        " The late Cynthia Nelson, professor of anthropology, founding director of the Cynthia Nelson Institute of Gender and Women Studies (IGWS) and former dean of the School of Humanities and Social Sciences, joined AUC in 1963. Her efforts to further gender and women’s studies in Egypt and the Arab world have made her a notable and respected figure in her field. Her outstanding lifetime contributions to AUC remain unparalleled as she is a role model for generations of young and aspiring scholars."
-        " In addition to full or partial tuition support, the highly competitive Cynthia Nelson Endowed Fellowships in Gender and Women’s Studies (IGWS) will provide students with the opportunity to work with a faculty member on research and other professional endeavors.",
-    specialties: 'Gender & Sexuality Studies, Humanities, Social Sciences',
-  ),
-  Opportunity(
-    age: ' ',
-    deadline: ' ',
-    title: 'Laboratory Instruction Graduate Fellowships',
-    city: 'Cairo',
-    universityName: 'AUC',
-    field: '',
-    fundingType: 'Fully Funded',
-    gender: 'All',
-    imageUrl:
-        'https://marj3.azureedge.net/wp-content/uploads/2020/07/0-4-1536x1022.jpg ',
-    toeflLevel: '61/120 MIN Score',
-    ieltsLevel: '6/9 MIN Score',
-    rate: 5.0,
-    type: 'Fellowships ',
-    startDate: '11/01/2021',
-    duration: 'More than year',
-    moreDetails: ' ',
-    description:
-        'International Graduate Fellowships are offered to highly qualified international students who wish to pursue full-time study (nine credits per semester) toward a master degree in one of the graduate programs at AUC.',
-    specialties:
-        'Art, Business & Management, Business Administration, Business Information Systems, Creative, Applied Arts and Design, Education & Training, Engineering & Technology, Global studies, Law Sciences, Management, Medicine & Health, Public Administration, Public Health, Public Policy, Social Sciences, Web Technologies & Cloud Computing',
-  ),
-  Opportunity(
-    age: ' ',
-    deadline: ' ',
-    title: 'Apply For Master Scholarship To Study At Nile University 2020',
-    city: 'Cairo',
+        'Nile University_Banque Misr Foundation for Social Development scholarship',
     universityName: 'Nile University',
-    field: '',
-    fundingType: 'Fully Funded',
-    gender: 'All',
+    city: 'Cairo',
+    fundingType: 'Fully/Partially Funded',
     imageUrl:
-        'https://marj3.azureedge.net/wp-content/uploads/2020/06/foreign-students.jpg ',
-    toeflLevel: '61/120 MIN Score',
-    ieltsLevel: '6/9 MIN Score',
+        'https://marj3.azureedge.net/wp-content/uploads/2020/07/woman-in-black-and-white-stripe-shirt-holding-books-3807735.jpg',
     rate: 4.0,
-    type: 'Master',
-    startDate: '11/01/2021',
-    duration: '2-3 Years',
-    moreDetails: ' ',
+    benefits: [
+      Benefits(benefitName: 'Cover Tuition Fees', details: 'Full tuition fee'),
+      Benefits(
+          benefitName: 'Accommodation',
+          details:
+              'Allowance for accommodation in University shared a dormitory'),
+      Benefits(
+          benefitName: 'Salary',
+          details: 'Total Value: \$8,000 as \$2,000 renewable award each year'),
+    ],
+    requiredDegree: [],
+    eligibility: [
+      Eligibility(eligibilityName: 'Age', details: '18-24'),
+      Eligibility(eligibilityName: 'Gender', details: 'All'),
+      Eligibility(eligibilityName: 'Nationality', details: 'Egypt'),
+      Eligibility(
+          eligibilityName: 'Required Languages',
+          details: 'Arabic, English, French'),
+    ],
+    requiredSchoolDegree: [
+      RequiredSchoolDegree(
+          schoolType: 'Thanwya Amma',
+          constrains:
+              '94% MIN. Score Math Division, 90% MIN. Score Arts Division'),
+      RequiredSchoolDegree(
+          schoolType: 'STEM School', constrains: '94% MIN. Score'),
+      RequiredSchoolDegree(
+          schoolType: 'Nile School', constrains: '90% MIN. Score'),
+    ],
+    requiredTests: [
+      RequiredTests(testName: 'IELTS', score: '7/9 MIN. Score'),
+      RequiredTests(testName: 'TOEFL-ITP', score: '500/667 MIN. Score'),
+      RequiredTests(testName: 'TOEFL-IBT', score: '61/120 MIN. Score'),
+    ],
+    type: 'Bachelor',
+    startDate: '',
+    duration: 'More than year',
+    moreDetails:
+        'High academic progress toward completion of degree requirements. A scholarship recipient is required to maintain minimum 3.0 GPA throughout the course of study. Failure to maintain the required GPA will result in losing their place on the scholarship program.',
     description:
-        'International Graduate Fellowships are offered to highly qualified international students who wish to pursue full-time study (nine credits per semester) toward a master degree in one of the graduate programs at AUC.',
+        'Banque Misr Foundation for Social Development is offering full scholarships to Egyptian students from all over Egypt applying for undergraduate studies at Nile University at the School of Engineering and Applied Sciences, School of Business Administration covering the full duration of study.',
     specialties:
-        'Art, Business & Management, Business Administration, Business Information Systems, Creative, Applied Arts and Design, Education & Training, Engineering & Technology, Global studies, Law Sciences, Management, Medicine & Health, Public Administration, Public Health, Public Policy, Social Sciences, Web Technologies & Cloud Computing',
+        'Business & Management, Business Studies, Civil Engineering & Construction, Economics, Electronics & Embedded Technology, Engineering & Technology, Entrepreneurship, Finance, General Engineering & Technology, Management, Marketing, Mechanical Engineering, Social Sciences',
+  ),
+];
+
+List<Opportunity> opportunityList2 = [
+  Opportunity(
+    deadline: '31/08/2020',
+    title: 'Academic Achievement Scholarship',
+    universityName: 'Egypt-Japan University',
+    city: 'Cairo',
+    fundingType: 'Fully/Partially Funded',
+    imageUrl:
+        'https://marj3.azureedge.net/wp-content/uploads/2020/08/69904.jpg',
+    rate: 4.0,
+    benefits: [
+      Benefits(benefitName: 'Cover Tuition Fees', details: 'Full tuition fee'),
+      Benefits(
+          benefitName: 'Accommodation',
+          details:
+              'Allowance for accommodation in University shared a dormitory'),
+      Benefits(
+          benefitName: 'Salary',
+          details: 'Total Value: \$8,000 as \$2,000 renewable award each year'),
+    ],
+    requiredDegree: [],
+    eligibility: [
+      Eligibility(eligibilityName: 'Age', details: '18-24'),
+      Eligibility(eligibilityName: 'Gender', details: 'All'),
+      Eligibility(eligibilityName: 'Nationality', details: 'Egypt'),
+      Eligibility(
+          eligibilityName: 'Required Languages',
+          details: 'Arabic, English, French'),
+    ],
+    requiredSchoolDegree: [
+      RequiredSchoolDegree(
+          schoolType: 'Thanwya Amma',
+          constrains:
+              '94% MIN. Score Math Division, 90% MIN. Score Arts Division'),
+      RequiredSchoolDegree(
+          schoolType: 'STEM School', constrains: '94% MIN. Score'),
+      RequiredSchoolDegree(
+          schoolType: 'Nile School', constrains: '90% MIN. Score'),
+    ],
+    requiredTests: [
+      RequiredTests(testName: 'IELTS', score: '7/9 MIN. Score'),
+      RequiredTests(testName: 'TOEFL-ITP', score: '500/667 MIN. Score'),
+      RequiredTests(testName: 'TOEFL-IBT', score: '61/120 MIN. Score'),
+    ],
+    type: 'Bachelor',
+    startDate: '',
+    duration: 'More than year',
+    moreDetails:
+        'High academic progress toward completion of degree requirements. A scholarship recipient is required to maintain minimum 3.0 GPA throughout the course of study. Failure to maintain the required GPA will result in losing their place on the scholarship program.',
+    description:
+        'Banque Misr Foundation for Social Development is offering full scholarships to Egyptian students from all over Egypt applying for undergraduate studies at Nile University at the School of Engineering and Applied Sciences, School of Business Administration covering the full duration of study.',
+    specialties:
+        'Business & Management, Business Studies, Civil Engineering & Construction, Economics, Electronics & Embedded Technology, Engineering & Technology, Entrepreneurship, Finance, General Engineering & Technology, Management, Marketing, Mechanical Engineering, Social Sciences',
   ),
   Opportunity(
-    age: ' ',
-    deadline: ' ',
+    deadline: '31/08/2020',
     title: 'AUC International Graduate Fellowships',
+    universityName: 'AUC ',
     city: 'Cairo',
-    universityName: 'AUC',
-    field: '',
-    fundingType: 'Fully Funded',
-    gender: 'All',
+    fundingType: 'Fully/Partially Funded',
     imageUrl:
-        'https://marj3.azureedge.net/wp-content/uploads/2020/09/Screenshot-540.png ',
-    toeflLevel: '61/120 MIN Score',
-    ieltsLevel: '6/9 MIN Score',
+        'https://marj3.azureedge.net/wp-content/uploads/2020/09/Screenshot-540.png',
     rate: 4.0,
-    type: 'Master',
-    startDate: '11/01/2021',
+    benefits: [
+      Benefits(benefitName: 'Cover Tuition Fees', details: 'Full tuition fee'),
+      Benefits(
+          benefitName: 'Accommodation',
+          details:
+              'Allowance for accommodation in University shared a dormitory'),
+      Benefits(
+          benefitName: 'Salary',
+          details: 'Total Value: \$8,000 as \$2,000 renewable award each year'),
+    ],
+    requiredDegree: [],
+    eligibility: [
+      Eligibility(eligibilityName: 'Age', details: '18-24'),
+      Eligibility(eligibilityName: 'Gender', details: 'All'),
+      Eligibility(eligibilityName: 'Nationality', details: 'Egypt'),
+      Eligibility(
+          eligibilityName: 'Required Languages',
+          details: 'Arabic, English, French'),
+    ],
+    requiredSchoolDegree: [
+      RequiredSchoolDegree(
+          schoolType: 'Thanwya Amma',
+          constrains:
+              '94% MIN. Score Math Division, 90% MIN. Score Arts Division'),
+      RequiredSchoolDegree(
+          schoolType: 'STEM School', constrains: '94% MIN. Score'),
+      RequiredSchoolDegree(
+          schoolType: 'Nile School', constrains: '90% MIN. Score'),
+    ],
+    requiredTests: [
+      RequiredTests(testName: 'IELTS', score: '7/9 MIN. Score'),
+      RequiredTests(testName: 'TOEFL-ITP', score: '500/667 MIN. Score'),
+      RequiredTests(testName: 'TOEFL-IBT', score: '61/120 MIN. Score'),
+    ],
+    type: 'Bachelor',
+    startDate: '',
     duration: 'More than year',
-    moreDetails: ' ',
+    moreDetails:
+        'High academic progress toward completion of degree requirements. A scholarship recipient is required to maintain minimum 3.0 GPA throughout the course of study. Failure to maintain the required GPA will result in losing their place on the scholarship program.',
     description:
-        'International Graduate Fellowships are offered to highly qualified international students who wish to pursue full-time study (nine credits per semester) toward a master degree in one of the graduate programs at AUC.',
+        'Banque Misr Foundation for Social Development is offering full scholarships to Egyptian students from all over Egypt applying for undergraduate studies at Nile University at the School of Engineering and Applied Sciences, School of Business Administration covering the full duration of study.',
     specialties:
-        'Art, Business & Management, Business Administration, Business Information Systems, Creative, Applied Arts and Design, Education & Training, Engineering & Technology, Global studies, Law Sciences, Management, Medicine & Health, Public Administration, Public Health, Public Policy, Social Sciences, Web Technologies & Cloud Computing',
-  ),
-  Opportunity(
-    age: ' ',
-    deadline: ' ',
-    title: 'AUC International Graduate Fellowships',
-    city: 'Cairo',
-    universityName: 'AUC',
-    field: '',
-    fundingType: 'Fully Funded',
-    gender: 'All',
-    imageUrl:
-        'https://marj3.azureedge.net/wp-content/uploads/2020/09/Screenshot-540.png ',
-    toeflLevel: '61/120 MIN Score',
-    ieltsLevel: '6/9 MIN Score',
-    rate: 4.0,
-    type: 'Master',
-    startDate: '11/01/2021',
-    duration: 'More than year',
-    moreDetails: ' ',
-    description:
-        'International Graduate Fellowships are offered to highly qualified international students who wish to pursue full-time study (nine credits per semester) toward a master degree in one of the graduate programs at AUC.',
-    specialties:
-        'Art, Business & Management, Business Administration, Business Information Systems, Creative, Applied Arts and Design, Education & Training, Engineering & Technology, Global studies, Law Sciences, Management, Medicine & Health, Public Administration, Public Health, Public Policy, Social Sciences, Web Technologies & Cloud Computing',
+        'Business & Management, Business Studies, Civil Engineering & Construction, Economics, Electronics & Embedded Technology, Engineering & Technology, Entrepreneurship, Finance, General Engineering & Technology, Management, Marketing, Mechanical Engineering, Social Sciences',
   ),
 ];
