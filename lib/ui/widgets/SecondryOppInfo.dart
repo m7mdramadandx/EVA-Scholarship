@@ -4,7 +4,7 @@ import 'package:eva_pharma/models/RequiredDegree.dart';
 import 'package:eva_pharma/models/RequiredHighSchoolDegree.dart';
 import 'package:eva_pharma/models/RequiredTests.dart';
 import 'package:eva_pharma/models/opportunity.dart';
-import 'package:eva_pharma/widgets/colors.dart';
+import 'package:eva_pharma/ui/widgets/colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 

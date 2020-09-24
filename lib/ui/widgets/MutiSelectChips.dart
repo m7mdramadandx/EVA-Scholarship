@@ -1,4 +1,4 @@
-import 'package:eva_pharma/widgets/colors.dart';
+import 'package:eva_pharma/ui/widgets/colors.dart';
 import 'package:flutter/material.dart';
 
 class MultiSelectChip extends StatefulWidget {

@@ -1,8 +1,7 @@
-import 'package:eva_pharma/screens/Home.dart';
+import 'package:eva_pharma/ui/screens/Home.dart';
+import 'package:eva_pharma/ui/widgets/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-
-import 'widgets/colors.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

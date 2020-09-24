@@ -2,19 +2,50 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="193371d1-6f89-4d27-b5e7-5d2b84c527ae" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitmodules" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inject.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/block/Block.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/block/QueryBlock.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/block/WeatherBloc.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/di/AppInjector.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/mainn.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/models/Place.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/models/WeatherResponse.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/persistence/ApiProvider.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/persistence/Repository.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/ui/screens/WeatherScreen.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/widgets/SwiperWidget.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/Dashboard.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/screens/Dashboard.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/Details.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/screens/Details.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/Explore.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/screens/Explore.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/Favorite.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/screens/Favorite.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/Home.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/screens/Home.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/Landing.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/screens/Landing.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/Notifications.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/screens/Notifications.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/OppInfoScreen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/screens/OppInfoScreen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/Profile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/screens/Profile.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/widgets/CustomListView.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/widgets/CustomListView.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/widgets/DropDown.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/widgets/DropDown.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/widgets/MutiSelectChips.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/widgets/MutiSelectChips.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/widgets/OppCard.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/widgets/OppCard.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/widgets/OppLightCard.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/widgets/OppLightCard.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/widgets/OppTypes.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/widgets/OppTypes.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/widgets/PrimaryOppInfo.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/widgets/PrimaryOppInfo.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/widgets/SecondryOppInfo.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/widgets/SecondryOppInfo.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/widgets/colors.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/widgets/colors.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/widgets/constants.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/widgets/constants.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/widget_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/widget_test.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="FUH0216913011885" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="Iphone_X" />
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -42,6 +73,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
@@ -75,13 +107,18 @@
       <command value="flutter test --coverage " />
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Flutter.mainn.dart">
     <configuration name="main.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
       <option name="filePath" value="$PROJECT_DIR$/lib/main.dart" />
       <method v="2" />
     </configuration>
+    <configuration name="mainn.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/lib/mainn.dart" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Flutter.mainn.dart" />
         <item itemvalue="Flutter.main.dart" />
       </list>
     </recent_temporary>
@@ -98,6 +135,9 @@
       <updated>1600159237548</updated>
     </task>
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="187" y="112" key="#Plugins" timestamp="1600337780277">
@@ -116,6 +156,10 @@
       <screen x="0" y="30" width="1536" height="834" />
     </state>
     <state x="456" y="158" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog/0.30.1536.834@0.30.1536.834" timestamp="1600337933238" />
+    <state x="394" y="380" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1600940562083">
+      <screen x="0" y="30" width="1536" height="834" />
+    </state>
+    <state x="394" y="380" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.30.1536.834@0.30.1536.834" timestamp="1600940562083" />
     <state x="431" y="201" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1600595097055">
       <screen x="0" y="30" width="1536" height="834" />
     </state>
@@ -124,22 +168,22 @@
       <screen x="0" y="30" width="1536" height="834" />
     </state>
     <state x="272" y="190" key="FileChooserDialogImpl/0.30.1536.834@0.30.1536.834" timestamp="1600427989397" />
-    <state width="1138" height="211" key="GridCell.Tab.0.bottom" timestamp="1600900865191">
+    <state width="1011" height="212" key="GridCell.Tab.0.bottom" timestamp="1600949458062">
       <screen x="0" y="30" width="1536" height="834" />
     </state>
-    <state width="1138" height="211" key="GridCell.Tab.0.bottom/0.30.1536.834@0.30.1536.834" timestamp="1600900865191" />
-    <state width="1138" height="211" key="GridCell.Tab.0.center" timestamp="1600900865191">
+    <state width="1011" height="212" key="GridCell.Tab.0.bottom/0.30.1536.834@0.30.1536.834" timestamp="1600949458062" />
+    <state width="1011" height="212" key="GridCell.Tab.0.center" timestamp="1600949458061">
       <screen x="0" y="30" width="1536" height="834" />
     </state>
-    <state width="1138" height="211" key="GridCell.Tab.0.center/0.30.1536.834@0.30.1536.834" timestamp="1600900865191" />
-    <state width="1138" height="211" key="GridCell.Tab.0.left" timestamp="1600900865190">
+    <state width="1011" height="212" key="GridCell.Tab.0.center/0.30.1536.834@0.30.1536.834" timestamp="1600949458061" />
+    <state width="1011" height="212" key="GridCell.Tab.0.left" timestamp="1600949458061">
       <screen x="0" y="30" width="1536" height="834" />
     </state>
-    <state width="1138" height="211" key="GridCell.Tab.0.left/0.30.1536.834@0.30.1536.834" timestamp="1600900865190" />
-    <state width="1138" height="211" key="GridCell.Tab.0.right" timestamp="1600900865191">
+    <state width="1011" height="212" key="GridCell.Tab.0.left/0.30.1536.834@0.30.1536.834" timestamp="1600949458061" />
+    <state width="1011" height="212" key="GridCell.Tab.0.right" timestamp="1600949458061">
       <screen x="0" y="30" width="1536" height="834" />
     </state>
-    <state width="1138" height="211" key="GridCell.Tab.0.right/0.30.1536.834@0.30.1536.834" timestamp="1600900865191" />
+    <state width="1011" height="212" key="GridCell.Tab.0.right/0.30.1536.834@0.30.1536.834" timestamp="1600949458061" />
     <state x="145" y="30" key="SettingsEditor" timestamp="1600346539006">
       <screen x="0" y="30" width="1536" height="834" />
     </state>

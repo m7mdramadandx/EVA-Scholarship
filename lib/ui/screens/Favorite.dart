@@ -1,5 +1,5 @@
 import 'package:eva_pharma/models/opportunity.dart';
-import 'package:eva_pharma/widgets/OppCard.dart';
+import 'package:eva_pharma/ui/widgets/OppCard.dart';
 import 'package:flutter/material.dart';
 
 class FavoriteScreen extends StatelessWidget {

@@ -16,13 +16,12 @@ dependencies:
   circular_bottom_navigation: ^1.0.1
   font_awesome_flutter: ^8.8.1
   cached_network_image: ^2.3.2+1
-  flutter_bloc: ^3.0.0
-  http: ^0.12.0
-  meta: ^1.1.6
-  equatable: ^1.0.0
-  provider: ^3.0.0
+  http: ^0.12.2
+  rxdart: ^0.24.1
+  intl: ^0.16.1
 
-#  flappy_search_bar: 1.4.1
+  inject:
+    path: ./inject.dart/package/inject
 
 
 
@@ -33,6 +32,9 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
+  inject_generator:
+    path: ./inject.dart/package/inject_generator
 
 
 flutter:

@@ -1,6 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:eva_pharma/models/opportunity.dart';
-import 'package:eva_pharma/screens/OppInfoScreen.dart';
+import 'package:eva_pharma/ui/screens/OppInfoScreen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 

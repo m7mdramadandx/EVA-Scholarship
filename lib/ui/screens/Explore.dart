@@ -1,10 +1,10 @@
 import 'package:eva_pharma/models/DataSearch.dart';
 import 'package:eva_pharma/models/opportunity.dart';
-import 'package:eva_pharma/widgets/DropDown.dart';
-import 'package:eva_pharma/widgets/MutiSelectChips.dart';
-import 'package:eva_pharma/widgets/OppLightCard.dart';
-import 'package:eva_pharma/widgets/OppTypes.dart';
-import 'package:eva_pharma/widgets/colors.dart';
+import 'package:eva_pharma/ui/widgets/DropDown.dart';
+import 'package:eva_pharma/ui/widgets/MutiSelectChips.dart';
+import 'package:eva_pharma/ui/widgets/OppLightCard.dart';
+import 'package:eva_pharma/ui/widgets/OppTypes.dart';
+import 'package:eva_pharma/ui/widgets/colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 

@@ -2,12 +2,12 @@ import 'dart:ui';
 
 import 'package:circular_bottom_navigation/circular_bottom_navigation.dart';
 import 'package:circular_bottom_navigation/tab_item.dart';
-import 'package:eva_pharma/screens/Dashboard.dart';
-import 'package:eva_pharma/screens/Explore.dart';
-import 'package:eva_pharma/screens/Favorite.dart';
-import 'package:eva_pharma/screens/Notifications.dart';
-import 'package:eva_pharma/screens/Profile.dart';
-import 'package:eva_pharma/widgets/colors.dart';
+import 'package:eva_pharma/ui/screens/Dashboard.dart';
+import 'package:eva_pharma/ui/screens/Explore.dart';
+import 'package:eva_pharma/ui/screens/Favorite.dart';
+import 'package:eva_pharma/ui/screens/Notifications.dart';
+import 'package:eva_pharma/ui/screens/Profile.dart';
+import 'package:eva_pharma/ui/widgets/colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
