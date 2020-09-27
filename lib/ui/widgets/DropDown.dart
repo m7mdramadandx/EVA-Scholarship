@@ -3,17 +3,17 @@ import 'package:flutter/material.dart';
 
 import 'colors.dart';
 
-class DropDown extends StatefulWidget {
+class DropDownMenu extends StatefulWidget {
   @override
-  _DropDownState createState() => _DropDownState();
+  _DropDownMenuState createState() => _DropDownMenuState();
 }
 
-class _DropDownState extends State<DropDown> {
+class _DropDownMenuState extends State<DropDownMenu> {
   List<Specialties> _dropdownItems = [
-    Specialties(1, "First Value"),
-    Specialties(2, "Second Item"),
-    Specialties(3, "Third Item"),
-    Specialties(4, "Fourth Item")
+    Specialties(1, "Computer Science and Engineer"),
+    Specialties(2, "Law"),
+    Specialties(3, "Business"),
+    Specialties(4, "Accountant")
   ];
 
   List<DropdownMenuItem<Specialties>> _dropdownMenuItems;
@@ -32,7 +32,7 @@ class _DropDownState extends State<DropDown> {
     for (Specialties specialties in listItems) {
       items.add(
         DropdownMenuItem(
-          child: Text(specialties.speciality),
+          child: Text(specialties.speciality, overflow: TextOverflow.ellipsis),
           value: specialties,
         ),
       );
@@ -50,7 +50,7 @@ class _DropDownState extends State<DropDown> {
                 TextStyle(color: kPrimaryColor, fontWeight: FontWeight.w600)),
         SizedBox(width: 10),
         Container(
-          padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+          padding: EdgeInsets.symmetric(horizontal: 8, vertical: 8),
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10.0), color: kAccentColor),
           child: DropdownButtonHideUnderline(
@@ -64,6 +64,7 @@ class _DropDownState extends State<DropDown> {
                 onChanged: (value) {
                   setState(() {
                     _selectedItem = value;
+                    print(_selectedItem.speciality);
                   });
                 }),
           ),

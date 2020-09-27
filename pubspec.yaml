@@ -20,21 +20,10 @@ dependencies:
   rxdart: ^0.24.1
   intl: ^0.16.1
 
-  inject:
-    path: ./inject.dart/package/inject
-
-
-
-
-
-
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
-  inject_generator:
-    path: ./inject.dart/package/inject_generator
 
 
 flutter:

@@ -7,9 +7,10 @@ import 'package:flutter/material.dart';
 
 import 'colors.dart';
 
-class CustomListView extends StatelessWidget {
+class DashboardCard extends StatelessWidget {
   Opportunity opportunity;
-  CustomListView(this.opportunity) : super();
+
+  DashboardCard(this.opportunity) : super();
 
   @override
   Widget build(BuildContext context) {
@@ -27,14 +28,14 @@ class CustomListView extends StatelessWidget {
             Positioned(
               bottom: 0.0,
               child: Container(
-                height: 140.0,
-                width: size.width * 0.65,
+                height: size.height * 0.2,
+                width: size.width * 0.7,
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(15.0),
                 ),
                 child: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+                  padding: EdgeInsets.symmetric(horizontal: 8, vertical: 8),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.end,
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -47,7 +48,7 @@ class CustomListView extends StatelessWidget {
                           color: kPrimaryColor,
                           letterSpacing: 1.2,
                         ),
-                        maxLines: 2,
+                        maxLines: 1,
                         overflow: TextOverflow.ellipsis,
                       ),
                       SizedBox(height: 8),
@@ -60,17 +61,17 @@ class CustomListView extends StatelessWidget {
                         maxLines: 2,
                         overflow: TextOverflow.ellipsis,
                       ),
-                      SizedBox(height: 4),
+                      SizedBox(height: 6.0),
                       Container(
-                        padding: EdgeInsets.all(5.0),
-                        width: 80,
+                        padding: EdgeInsets.all(4.0),
+                        width: 100,
                         decoration: BoxDecoration(
                           color: kAccentColor,
                           borderRadius: BorderRadius.circular(10.0),
                         ),
                         alignment: Alignment.center,
                         child: Text(opportunity.deadline),
-                      ),
+                      )
                     ],
                   ),
                 ),
@@ -85,7 +86,7 @@ class CustomListView extends StatelessWidget {
                     child: CachedNetworkImage(
                       imageUrl: opportunity.imageUrl,
                       width: size.width * 0.7,
-                      height: 160,
+                      height: size.height * 0.2,
                       imageBuilder: (context, imageProvider) => Container(
                         decoration: BoxDecoration(
                             image: DecorationImage(
@@ -106,11 +107,10 @@ class CustomListView extends StatelessWidget {
                     child: Text(
                       opportunity.type,
                       style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 24.0,
-                        fontWeight: FontWeight.w600,
-                        letterSpacing: 1.2,
-                      ),
+                          color: Colors.white,
+                          fontSize: 24.0,
+                          fontWeight: FontWeight.w600,
+                          letterSpacing: 1.2),
                     ),
                   ),
                   Positioned(
@@ -118,7 +118,7 @@ class CustomListView extends StatelessWidget {
                     bottom: 10.0,
                     child: Container(
                       decoration: BoxDecoration(
-                          color: kGreyColor,
+                          color: Colors.grey.shade600.withAlpha(150),
                           borderRadius: BorderRadius.circular(5.0)),
                       child: Padding(
                         padding: const EdgeInsets.all(4.0),

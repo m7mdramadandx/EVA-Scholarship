@@ -9,6 +9,18 @@
       <excludeFolder url="file://$MODULE_DIR$/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/build" />
+      <excludeFolder url="file://$MODULE_DIR$/inject.dart/example/coffee/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/inject.dart/example/coffee/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/inject.dart/example/coffee/build" />
+      <excludeFolder url="file://$MODULE_DIR$/inject.dart/example/train/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/inject.dart/example/train/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/inject.dart/example/train/build" />
+      <excludeFolder url="file://$MODULE_DIR$/inject.dart/package/inject/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/inject.dart/package/inject/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/inject.dart/package/inject/build" />
+      <excludeFolder url="file://$MODULE_DIR$/inject.dart/package/inject_generator/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/inject.dart/package/inject_generator/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/inject.dart/package/inject_generator/build" />
     </content>
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Dart SDK" level="project" />

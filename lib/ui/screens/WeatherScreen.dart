@@ -1,4 +1,4 @@
-import 'package:eva_pharma/block/WeatherBloc.dart';
+import 'package:eva_pharma/blocks/WeatherBloc.dart';
 import 'package:eva_pharma/models/Place.dart';
 import 'package:flutter/material.dart';
 

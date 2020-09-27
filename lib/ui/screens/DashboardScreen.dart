@@ -98,12 +98,12 @@ class DashboardScreen extends StatelessWidget {
                   ),
                 ),
                 Container(
-                  height: 300,
+                  height: size.height * 0.4,
                   child: ListView.builder(
                     itemCount: opportunityList.length,
                     scrollDirection: Axis.horizontal,
                     itemBuilder: (context, index) =>
-                        CustomListView(opportunityList[index]),
+                        DashboardCard(opportunityList[index]),
                   ),
                 ),
               ],
@@ -138,12 +138,12 @@ class DashboardScreen extends StatelessWidget {
                   ),
                 ),
                 Container(
-                  height: 300,
+                  height: size.height * 0.4,
                   child: ListView.builder(
                     itemCount: opportunityList2.length,
                     scrollDirection: Axis.horizontal,
                     itemBuilder: (context, index) =>
-                        CustomListView(opportunityList2[index]),
+                        DashboardCard(opportunityList2[index]),
                   ),
                 ),
               ],

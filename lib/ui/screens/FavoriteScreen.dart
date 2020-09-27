@@ -1,5 +1,5 @@
 import 'package:eva_pharma/models/opportunity.dart';
-import 'package:eva_pharma/ui/widgets/OppCard.dart';
+import 'package:eva_pharma/ui/widgets/OppSolidCard.dart';
 import 'package:flutter/material.dart';
 
 class FavoriteScreen extends StatelessWidget {
@@ -16,7 +16,7 @@ class FavoriteScreen extends StatelessWidget {
           children: [
             SizedBox(height: size.height * 0.01),
             ...List.generate(opportunityList.length,
-                (index) => OppCard(opportunityList[index])),
+                (index) => OppSolidCard(opportunityList[index])),
             SizedBox(height: size.height * 0.1),
           ],
         ),

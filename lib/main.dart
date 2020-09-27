@@ -1,4 +1,4 @@
-import 'package:eva_pharma/ui/screens/Home.dart';
+import 'package:eva_pharma/ui/screens/HomeScreen.dart';
 import 'package:eva_pharma/ui/widgets/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';

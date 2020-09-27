@@ -2,16 +2,16 @@ import 'dart:ui';
 
 import 'package:circular_bottom_navigation/circular_bottom_navigation.dart';
 import 'package:circular_bottom_navigation/tab_item.dart';
-import 'package:eva_pharma/ui/screens/Dashboard.dart';
-import 'package:eva_pharma/ui/screens/Explore.dart';
-import 'package:eva_pharma/ui/screens/Favorite.dart';
-import 'package:eva_pharma/ui/screens/Notifications.dart';
-import 'package:eva_pharma/ui/screens/Profile.dart';
 import 'package:eva_pharma/ui/widgets/colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../widgets/constants.dart';
+import 'DashboardScreen.dart';
+import 'ExploreScreen.dart';
+import 'FavoriteScreen.dart';
+import 'NotificationsScreen.dart';
+import 'ProfileScreen.dart';
 
 class HomeScreen extends StatefulWidget {
   @override

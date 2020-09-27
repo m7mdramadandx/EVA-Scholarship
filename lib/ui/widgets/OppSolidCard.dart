@@ -1,14 +1,22 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:eva_pharma/models/opportunity.dart';
 import 'package:eva_pharma/ui/screens/OppInfoScreen.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'colors.dart';
 
-class OppCard extends StatelessWidget {
-  OppCard(this._opportunity) : super();
+class OppSolidCard extends StatefulWidget {
+  OppSolidCard(this._opportunity) : super();
 
   final Opportunity _opportunity;
+
+  @override
+  _OppSolidCardState createState() => _OppSolidCardState();
+}
+
+class _OppSolidCardState extends State<OppSolidCard> {
+  bool isFavorite = false;
 
   @override
   Widget build(BuildContext context) {
@@ -16,62 +24,57 @@ class OppCard extends StatelessWidget {
     return InkWell(
       onTap: () => Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => OppInfoScreen(_opportunity)),
+        MaterialPageRoute(
+            builder: (context) => OppInfoScreen(widget._opportunity)),
       ),
       child: Padding(
         padding: EdgeInsets.symmetric(vertical: 5),
         child: Stack(
           children: <Widget>[
             Container(
-              margin: EdgeInsets.fromLTRB(40.0, 6.0, 0.0, 0.0),
-              height: size.height * 0.22,
+              margin: EdgeInsets.fromLTRB(size.width * 0.2, 6.0, 0.0, 6.0),
+              height: size.height * 0.2,
+              width: size.width,
               decoration: BoxDecoration(
-                color: Colors.white,
+                color: kPrimaryColor,
                 borderRadius:
                     BorderRadius.horizontal(left: Radius.circular(20)),
               ),
               child: Padding(
-                padding: EdgeInsets.fromLTRB(100.0, 10.0, 16.0, 10.0),
+                padding: EdgeInsets.fromLTRB(size.width * 0.32, 10, 32, 4),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        Expanded(
-                          flex: 3,
-                          child: Text(
-                            _opportunity.title,
-                            style: TextStyle(
-                              fontSize: 16.0,
-                              fontWeight: FontWeight.normal,
-                            ),
-                            overflow: TextOverflow.ellipsis,
-                            maxLines: 2,
-                          ),
-                        ),
-                        Expanded(
-                          flex: 1,
-                          child: Text(
-                            _opportunity.universityName,
-                            textAlign: TextAlign.center,
-                            style: TextStyle(color: kPrimaryColor),
-                            overflow: TextOverflow.ellipsis,
-                            maxLines: 2,
-                          ),
-                        ),
-                      ],
+                    Text(
+                      widget._opportunity.universityName,
+                      style: TextStyle(
+                          fontSize: 16.0,
+                          fontWeight: FontWeight.normal,
+                          color: Colors.white),
+                      overflow: TextOverflow.ellipsis,
+                      maxLines: 2,
                     ),
                     SizedBox(height: 6.0),
                     Text(
-                      _opportunity.description,
+                      widget._opportunity.type,
                       style: TextStyle(
-                        color: Colors.grey,
+                        color: Colors.white70,
                       ),
-                      overflow: TextOverflow.ellipsis,
-                      maxLines: 4,
+                    ),
+                    SizedBox(height: 6.0),
+                    Text(
+                      widget._opportunity.fundingType,
+                      style: TextStyle(
+                        color: Colors.white70,
+                      ),
+                    ),
+                    SizedBox(height: 6.0),
+                    Text(
+                      widget._opportunity.duration,
+                      style: TextStyle(
+                        color: Colors.white70,
+                      ),
                     ),
                     SizedBox(height: 6.0),
                     Container(
@@ -82,21 +85,21 @@ class OppCard extends StatelessWidget {
                         borderRadius: BorderRadius.circular(10.0),
                       ),
                       alignment: Alignment.center,
-                      child: Text(_opportunity.deadline),
+                      child: Text(widget._opportunity.deadline),
                     )
                   ],
                 ),
               ),
             ),
             Positioned(
-              left: 16.0,
+              left: 0.0,
               top: 16.0,
               bottom: 16.0,
               child: Hero(
-                tag: _opportunity.imageUrl,
+                tag: widget._opportunity.imageUrl,
                 child: CachedNetworkImage(
-                  imageUrl: _opportunity.imageUrl,
-                  width: 110,
+                  imageUrl: widget._opportunity.imageUrl,
+                  width: size.width * 0.5,
                   imageBuilder: (context, imageProvider) => Container(
                     decoration: BoxDecoration(
                         image: DecorationImage(
@@ -104,14 +107,22 @@ class OppCard extends StatelessWidget {
                         boxShadow: [
                           BoxShadow(
                               color: Colors.black38,
-                              offset: Offset(4.0, 4.0),
+                              offset: Offset(2.0, 8.0),
                               blurRadius: 8.0)
                         ],
-                        borderRadius: BorderRadius.circular(20)),
+                        borderRadius: BorderRadius.horizontal(
+                            right: Radius.circular(15))),
                   ),
                 ),
               ),
             ),
+            Positioned(
+                top: 10,
+                right: 0,
+                child: IconButton(
+                    icon: Icon(CupertinoIcons.delete,
+                        color: Colors.white, size: 19),
+                    onPressed: null))
           ],
         ),
       ),

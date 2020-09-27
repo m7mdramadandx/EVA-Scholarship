@@ -1,7 +1,8 @@
-import 'package:eva_pharma/block/Block.dart';
 import 'package:eva_pharma/models/Place.dart';
-import 'package:eva_pharma/persistence/Repository.dart';
+import 'package:eva_pharma/repository/OppRepository.dart';
 import 'package:rxdart/rxdart.dart';
+
+import 'Block.dart';
 
 class QueryBLock implements Block {
   Repository _repository = Repository();

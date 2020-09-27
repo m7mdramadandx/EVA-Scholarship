@@ -3,18 +3,19 @@ import 'package:flutter/material.dart';
 
 class DataSearch extends SearchDelegate {
   final cities = [
-    "alex",
-    'cairo',
-    'giza',
-    'mansoura',
-    'tanta',
-    'sharm',
-    'aswan'
+    "AUC",
+    'GUC',
+    'BUE',
+    'MSA',
+    'MUST',
+    'Nile University',
   ];
+
   final recentCities = [
-    "alex",
-    'cairo',
-    'giza',
+    'BUE',
+    'MSA',
+    'MUST',
+    'Nile University',
   ];
 
   @override
@@ -26,7 +27,6 @@ class DataSearch extends SearchDelegate {
             query = '';
           }),
     ];
-    throw UnimplementedError();
   }
 
   @override
@@ -37,8 +37,6 @@ class DataSearch extends SearchDelegate {
         close(context, null);
       },
     );
-
-    throw UnimplementedError();
   }
 
   @override
@@ -67,7 +65,7 @@ class DataSearch extends SearchDelegate {
         onTap: () {
           showResults(context);
         },
-        leading: Icon(Icons.title),
+        leading: Icon(Icons.business),
         title: RichText(
           text: TextSpan(
             text: suggestionList[index].substring(0, query.length),
