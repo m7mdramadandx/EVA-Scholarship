@@ -1,43 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="193371d1-6f89-4d27-b5e7-5d2b84c527ae" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/ui/screens/DashboardScreen.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/ui/screens/DetailsScreen.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/ui/screens/ExploreScreen.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/ui/screens/FavoriteScreen.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/ui/screens/HomeScreen.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/ui/screens/NotificationsScreen.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/ui/screens/ProfileScreen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eva_pharma.iml" beforeDir="false" afterPath="$PROJECT_DIR$/eva_pharma.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inject.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/block/Block.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/blocks/Block.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/block/QueryBlock.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/blocks/QueryBlock.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/block/WeatherBloc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/blocks/WeatherBloc.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/di/AppInjector.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/models/DataSearch.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/models/DataSearch.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/persistence/ApiProvider.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/network/ApiProvider.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/persistence/Repository.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/repository/OppRepository.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ui/screens/Dashboard.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ui/screens/Details.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ui/screens/Explore.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ui/screens/Favorite.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ui/screens/Home.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ui/screens/Landing.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ui/screens/Notifications.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ui/screens/Profile.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ui/screens/WeatherScreen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/screens/WeatherScreen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ui/widgets/CustomListView.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/widgets/CustomListView.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ui/widgets/DropDown.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/widgets/DropDown.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ui/widgets/OppCard.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/widgets/OppCard.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ui/widgets/OppLightCard.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/widgets/OppSolidCard.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
-    </list>
+    <list default="true" id="193371d1-6f89-4d27-b5e7-5d2b84c527ae" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -79,7 +43,7 @@
     <property name="add_unversioned_files" value="$PROJECT_DIR$/pubspec.lock" />
     <property name="dart.analysis.tool.window.force.activate" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Feen" />
     <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -163,26 +127,26 @@
       <screen x="0" y="30" width="1536" height="834" />
     </state>
     <state x="431" y="201" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.30.1536.834@0.30.1536.834" timestamp="1600595097055" />
-    <state x="272" y="190" key="FileChooserDialogImpl" timestamp="1600967387317">
+    <state x="272" y="190" key="FileChooserDialogImpl" timestamp="1601208637752">
       <screen x="0" y="30" width="1536" height="834" />
     </state>
-    <state x="272" y="190" key="FileChooserDialogImpl/0.30.1536.834@0.30.1536.834" timestamp="1600967387317" />
-    <state width="1012" height="210" key="GridCell.Tab.0.bottom" timestamp="1601195036022">
+    <state x="272" y="190" key="FileChooserDialogImpl/0.30.1536.834@0.30.1536.834" timestamp="1601208637752" />
+    <state width="1012" height="210" key="GridCell.Tab.0.bottom" timestamp="1601208639655">
       <screen x="0" y="30" width="1536" height="834" />
     </state>
-    <state width="1012" height="210" key="GridCell.Tab.0.bottom/0.30.1536.834@0.30.1536.834" timestamp="1601195036022" />
-    <state width="1012" height="210" key="GridCell.Tab.0.center" timestamp="1601195036021">
+    <state width="1012" height="210" key="GridCell.Tab.0.bottom/0.30.1536.834@0.30.1536.834" timestamp="1601208639655" />
+    <state width="1012" height="210" key="GridCell.Tab.0.center" timestamp="1601208639655">
       <screen x="0" y="30" width="1536" height="834" />
     </state>
-    <state width="1012" height="210" key="GridCell.Tab.0.center/0.30.1536.834@0.30.1536.834" timestamp="1601195036021" />
-    <state width="1012" height="210" key="GridCell.Tab.0.left" timestamp="1601195036009">
+    <state width="1012" height="210" key="GridCell.Tab.0.center/0.30.1536.834@0.30.1536.834" timestamp="1601208639655" />
+    <state width="1012" height="210" key="GridCell.Tab.0.left" timestamp="1601208639655">
       <screen x="0" y="30" width="1536" height="834" />
     </state>
-    <state width="1012" height="210" key="GridCell.Tab.0.left/0.30.1536.834@0.30.1536.834" timestamp="1601195036009" />
-    <state width="1012" height="210" key="GridCell.Tab.0.right" timestamp="1601195036021">
+    <state width="1012" height="210" key="GridCell.Tab.0.left/0.30.1536.834@0.30.1536.834" timestamp="1601208639655" />
+    <state width="1012" height="210" key="GridCell.Tab.0.right" timestamp="1601208639655">
       <screen x="0" y="30" width="1536" height="834" />
     </state>
-    <state width="1012" height="210" key="GridCell.Tab.0.right/0.30.1536.834@0.30.1536.834" timestamp="1601195036021" />
+    <state width="1012" height="210" key="GridCell.Tab.0.right/0.30.1536.834@0.30.1536.834" timestamp="1601208639655" />
     <state x="145" y="30" key="SettingsEditor" timestamp="1601194452143">
       <screen x="0" y="30" width="1536" height="834" />
     </state>
