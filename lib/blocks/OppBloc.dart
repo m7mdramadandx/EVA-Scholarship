@@ -12,7 +12,6 @@ class PlaceBloc implements Block {
 
   fetchLondonWeather() async {
     Place _weatherResponse = await _repository.fetchLondonWeather();
-
     _weatherFetcher.sink.add(_weatherResponse);
   }
 
