@@ -28,7 +28,6 @@ class University {
 
   factory University.fromJson(Map<String, dynamic> json) {
     return University(
-      // geometry: Geometry.fromJson(json['geometry']),
       id: json['id'] ?? '',
       name: json['name'] ?? '',
       country: json['country'] ?? '',

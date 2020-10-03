@@ -11,9 +11,6 @@ class OppBloc implements Bloc {
   PublishSubject oppFetcher;
 
   Stream<List<Opportunity>> get opportunityList => oppFetcher.stream;
-  List<Opportunity> oppList = List();
-
-  // StreamSink<List<Opportunity>> get opportunity2 => oppFetcher.sink;
 
   OppBloc() {
     oppFetcher = PublishSubject<List<Opportunity>>();
@@ -24,7 +21,6 @@ class OppBloc implements Bloc {
   fetchOpportunities() async {
     List<Opportunity> oppResponse = await _repository.fetchOpp();
     oppFetcher.sink.add(oppResponse);
-    oppList = oppResponse;
   }
 
   @override

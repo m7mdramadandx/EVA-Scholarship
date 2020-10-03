@@ -16,13 +16,12 @@ class DashboardScreen extends StatefulWidget {
 
 class _DashboardScreenState extends State<DashboardScreen> {
   OppBloc _oppBloc;
-  UniversityBloc _universityBloc;
 
   @override
   void initState() {
     super.initState();
     _oppBloc = OppBloc();
-    _universityBloc = UniversityBloc();
+    UniversityBloc();
   }
 
   @override
@@ -102,9 +101,12 @@ class _DashboardScreenState extends State<DashboardScreen> {
           if (snapshot.hasData) {
             return _buildDashboard(snapshot.data, context);
           } else if (snapshot.hasError) {
-            return Text(snapshot.error.toString());
+            return Center(child: Text(snapshot.error.toString()));
           }
-          return CircularProgressIndicator(backgroundColor: kPrimaryColor);
+          return Padding(
+            padding: const EdgeInsets.all(32.0),
+            child: CircularProgressIndicator(backgroundColor: kPrimaryColor),
+          );
         });
   }
 

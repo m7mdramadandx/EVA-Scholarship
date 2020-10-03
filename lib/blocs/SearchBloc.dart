@@ -8,14 +8,10 @@ import 'Bloc.dart';
 
 class SearchBloc implements Bloc {
   Repository _repository;
+  PublishSubject oppFetcher;
 
   Stream<List<Opportunity>> get opportunityList => oppFetcher.stream;
 
-  PublishSubject oppFetcher;
-
-  List<Opportunity> oppList = List();
-
-  // StreamSink<List<Opportunity>> get opportunity2 => oppFetcher.sink;
   SearchBloc(String query) {
     _repository = Repository();
     oppFetcher = PublishSubject<List<Opportunity>>();
@@ -23,15 +19,8 @@ class SearchBloc implements Bloc {
   }
 
   searchScholarships(String query) async {
-    print(query);
     List<Opportunity> oppResponse = await _repository.searchScholarship(query);
     oppFetcher.sink.add(oppResponse);
-  }
-
-  fetchOpportunities() async {
-    List<Opportunity> oppResponse = await _repository.fetchOpp();
-    oppFetcher.sink.add(oppResponse);
-    oppList = oppResponse;
   }
 
   @override

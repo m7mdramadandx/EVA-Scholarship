@@ -1,18 +1,19 @@
+import 'dart:io';
 import 'dart:ui';
 
 import 'package:circular_bottom_navigation/circular_bottom_navigation.dart';
 import 'package:circular_bottom_navigation/tab_item.dart';
 import 'package:eva_pharma/blocs/OppBloc.dart';
+import 'package:eva_pharma/blocs/UniversityBloc.dart';
+import 'package:eva_pharma/ui/screens/DashboardScreen.dart';
+import 'package:eva_pharma/ui/screens/ExploreScreen.dart';
+import 'package:eva_pharma/ui/screens/FavoriteScreen.dart';
+import 'package:eva_pharma/ui/screens/NotificationsScreen.dart';
+import 'package:eva_pharma/ui/screens/ProfileScreen.dart';
 import 'package:eva_pharma/ui/widgets/colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
-import '../widgets/constants.dart';
-import 'DashboardScreen.dart';
-import 'ExploreScreen.dart';
-import 'FavoriteScreen.dart';
-import 'NotificationsScreen.dart';
-import 'ProfileScreen.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -40,22 +41,35 @@ class _HomeScreenState extends State<HomeScreen> {
     NotificationsScreen(),
     ProfileScreen(),
   ];
-
   int selectedPos = 0;
   double bottomNavBarHeight = 50;
   CircularBottomNavigationController _navigationController;
+  final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    _navigationController = new CircularBottomNavigationController(selectedPos);
+    checkInternet();
+    _navigationController = CircularBottomNavigationController(selectedPos);
+  }
+
+  checkInternet() async {
+    try {
+      final result = await InternetAddress.lookup('google.com');
+      if (result.isNotEmpty && result[0].rawAddress.isNotEmpty) {}
+    } on SocketException catch (_) {
+      Fluttertoast.showToast(
+          msg: "Sorry!, no internet connection",
+          webShowClose: true,
+          timeInSecForIosWeb: 1);
+    }
   }
 
   @override
   Widget build(BuildContext context) {
-    var screenSize = MediaQuery.of(context).size;
     checkInternet();
     return Scaffold(
+      key: _scaffoldKey,
       body: Stack(
         children: [
           tabScreen[selectedPos],
@@ -87,5 +101,6 @@ class _HomeScreenState extends State<HomeScreen> {
     super.dispose();
     _navigationController.dispose();
     oppBloc.dispose();
+    universityBloc.dispose();
   }
 }

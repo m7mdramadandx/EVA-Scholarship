@@ -25,13 +25,10 @@ class _SearchResultScreenState extends State<SearchResultScreen> {
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
     return StreamBuilder<List<Opportunity>>(
         stream: _searchBloc.opportunityList,
         builder: (context, AsyncSnapshot<List<Opportunity>> snapshot) {
-          print(snapshot.connectionState);
           if (snapshot.hasData) {
-            print(snapshot.data.length);
             return _buildExplore(snapshot.data, context);
           } else if (snapshot.hasError) {
             return Text(snapshot.error.toString());
@@ -44,12 +41,17 @@ class _SearchResultScreenState extends State<SearchResultScreen> {
   Widget _buildExplore(List<Opportunity> data, BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Container(
-      height: size.height * 0.7,
-      width: size.width,
+      height: size.height,
       child: ListView.builder(
           itemCount: data.length,
           scrollDirection: Axis.vertical,
           itemBuilder: (context, index) => OppCard(data[index])),
     );
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    _searchBloc.dispose();
   }
 }

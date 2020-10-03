@@ -28,3 +28,5 @@ class UniversityBloc implements Bloc {
     universityFetcher.close();
   }
 }
+
+final universityBloc = UniversityBloc();

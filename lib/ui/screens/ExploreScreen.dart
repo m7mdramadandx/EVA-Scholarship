@@ -70,7 +70,6 @@ class _ExploreScreenState extends State<ExploreScreen> {
                 onSelectionChanged: (selectedList) {
                   setState(() {
                     selectedOppType = selectedList;
-                    print(selectedOppType.toString());
                   });
                 },
               ),
@@ -80,7 +79,6 @@ class _ExploreScreenState extends State<ExploreScreen> {
                 onSelectionChanged: (selectedItem) {
                   setState(() {
                     selectedField = selectedItem;
-                    print(selectedField);
                   });
                 },
               ),
@@ -90,7 +88,6 @@ class _ExploreScreenState extends State<ExploreScreen> {
                 onSelectionChanged: (selectedList) {
                   setState(() {
                     selectedFundingType = selectedList;
-                    print(selectedFundingType.toList());
                   });
                 },
               ),
@@ -178,9 +175,12 @@ class _ExploreScreenState extends State<ExploreScreen> {
                 filteredData.isNotEmpty ? filteredData : snapshot.data,
                 context);
           } else if (snapshot.hasError) {
-            return Text(snapshot.error.toString());
+            return Center(child: Text(snapshot.error.toString()));
           }
-          return CircularProgressIndicator(backgroundColor: kPrimaryColor);
+          return Padding(
+            padding: EdgeInsets.all(32.0),
+            child: CircularProgressIndicator(backgroundColor: kPrimaryColor),
+          );
         });
   }
 

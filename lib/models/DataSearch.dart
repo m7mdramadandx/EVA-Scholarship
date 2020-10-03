@@ -6,7 +6,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class DataSearch extends SearchDelegate {
-  // List<Opportunity> searchResult;
   String _query = '';
 
   @override
@@ -72,18 +71,8 @@ class DataSearch extends SearchDelegate {
             child: CircularProgressIndicator(backgroundColor: kPrimaryColor));
   }
 
-  method(List<University> data) {
-//   String getFirstLetter = query.substring(0, 1);
-//   return query.replaceRange(0, 1, getFirstLetter.toUpperCase());
-  }
-
   @override
   Widget buildResults(BuildContext context) {
     return SearchResultScreen(_query);
-  }
-
-  @override
-  void showResults(BuildContext context) {
-    super.showResults(context);
   }
 }

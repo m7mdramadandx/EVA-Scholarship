@@ -76,7 +76,6 @@ class DashboardCard extends StatelessWidget {
                 ),
               ),
             ),
-            ///////////------ Img
             Container(
               child: Stack(
                 children: <Widget>[
