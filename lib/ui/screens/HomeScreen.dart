@@ -2,7 +2,7 @@ import 'dart:ui';
 
 import 'package:circular_bottom_navigation/circular_bottom_navigation.dart';
 import 'package:circular_bottom_navigation/tab_item.dart';
-import 'package:eva_pharma/blocks/OppBloc.dart';
+import 'package:eva_pharma/blocs/OppBloc.dart';
 import 'package:eva_pharma/ui/widgets/colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';

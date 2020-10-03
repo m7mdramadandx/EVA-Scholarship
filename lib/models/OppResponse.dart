@@ -2,10 +2,6 @@ import 'package:eva_pharma/models/Opportunity.dart';
 import 'package:eva_pharma/models/University.dart';
 
 class OppResponse {
-  final List<Opportunity> opportunity;
-
-  OppResponse(this.opportunity);
-
   static List<Opportunity> parseOpportunities(List<dynamic> list) {
     return list.map((i) => Opportunity.fromJson(i)).toList();
   }

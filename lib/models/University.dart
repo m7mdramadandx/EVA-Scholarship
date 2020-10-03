@@ -1,5 +1,6 @@
 class University {
-  String name;
+  int id;
+  final String name;
   final String description;
   final String country;
   final String city;
@@ -12,7 +13,8 @@ class University {
   final String imgUrl;
 
   University(
-      {this.name,
+      {this.id,
+      this.name,
       this.description,
       this.country,
       this.city,
@@ -27,6 +29,7 @@ class University {
   factory University.fromJson(Map<String, dynamic> json) {
     return University(
       // geometry: Geometry.fromJson(json['geometry']),
+      id: json['id'] ?? '',
       name: json['name'] ?? '',
       country: json['country'] ?? '',
       city: json['city'] ?? '',

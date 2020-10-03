@@ -84,7 +84,7 @@ class DashboardCard extends StatelessWidget {
                     tag: opportunity.id,
                     child: CachedNetworkImage(
                       imageUrl: opportunity.university.imgUrl ??
-                          'https://raw.githubusercontent.com/felangel/bloc/master/docs/assets/bloc_architecture.png',
+                          'https://marj3.azureedge.net/wp-content/uploads/2020/09/Screenshot-540.png',
                       width: size.width * 0.7,
                       height: size.height * 0.2,
                       imageBuilder: (context, imageProvider) => Container(
@@ -132,7 +132,7 @@ class DashboardCard extends StatelessWidget {
                                 fontWeight: FontWeight.w600,
                               ),
                             ),
-                            Icon(Icons.star, color: yellow, size: 18)
+                            Icon(Icons.star, color: Colors.amber, size: 18)
                           ],
                         ),
                       ),

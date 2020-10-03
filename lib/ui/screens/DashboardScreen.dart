@@ -1,5 +1,5 @@
-import 'package:eva_pharma/blocks/OppBloc.dart';
-import 'package:eva_pharma/blocks/SearchBloc.dart';
+import 'package:eva_pharma/blocs/OppBloc.dart';
+import 'package:eva_pharma/blocs/UniversityBloc.dart';
 import 'package:eva_pharma/models/DataSearch.dart';
 import 'package:eva_pharma/models/Opportunity.dart';
 import 'package:eva_pharma/ui/widgets/CustomListView.dart';
@@ -16,11 +16,13 @@ class DashboardScreen extends StatefulWidget {
 
 class _DashboardScreenState extends State<DashboardScreen> {
   OppBloc _oppBloc;
+  UniversityBloc _universityBloc;
 
   @override
   void initState() {
     super.initState();
     _oppBloc = OppBloc();
+    _universityBloc = UniversityBloc();
   }
 
   @override
@@ -71,7 +73,6 @@ class _DashboardScreenState extends State<DashboardScreen> {
                             onTap: () {
                               showSearch(
                                   context: context, delegate: DataSearch());
-                              universityBloc.fetchUniversities();
                             },
                             readOnly: true,
                             decoration: InputDecoration(

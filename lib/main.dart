@@ -21,7 +21,7 @@ class EvaPharma extends StatelessWidget {
           primaryColor: Color(0xff004a7c),
           accentColor: Color(0xffcdcdcd),
           primaryColorLight: Color(0xff005691),
-          scaffoldBackgroundColor: silver,
+          scaffoldBackgroundColor: Color(0xffeeeeee),
           // iconTheme: IconThemeData(color: Colors.kGreyColor),
           // accentIconTheme: IconThemeData(color: Colors.kGreyColor),
           // primaryIconTheme: IconThemeData(color: Colors.kGreyColor),

@@ -96,7 +96,7 @@ class OppCard extends StatelessWidget {
                 tag: _opportunity.id,
                 child: CachedNetworkImage(
                   imageUrl: _opportunity.university.imgUrl ??
-                      'https://raw.githubusercontent.com/felangel/bloc/master/docs/assets/bloc_architecture.png',
+                      'https://marj3.azureedge.net/wp-content/uploads/2020/09/Screenshot-540.png',
                   width: 110,
                   imageBuilder: (context, imageProvider) => Container(
                     decoration: BoxDecoration(

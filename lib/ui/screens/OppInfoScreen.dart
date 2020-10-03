@@ -31,7 +31,7 @@ class _OppInfoScreenState extends State<OppInfoScreen> {
                   width: size.width,
                   height: size.height * 0.35,
                   imageUrl: widget.opportunity.university.imgUrl ??
-                      'https://raw.githubusercontent.com/felangel/bloc/master/docs/assets/bloc_architecture.png',
+                      'https://marj3.azureedge.net/wp-content/uploads/2020/09/Screenshot-540.png',
                   imageBuilder: (context, imageProvider) => Container(
                           decoration: BoxDecoration(
                               image: DecorationImage(

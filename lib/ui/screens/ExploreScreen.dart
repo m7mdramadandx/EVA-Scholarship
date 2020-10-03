@@ -1,4 +1,4 @@
-import 'package:eva_pharma/blocks/OppBloc.dart';
+import 'package:eva_pharma/blocs/OppBloc.dart';
 import 'package:eva_pharma/models/DataSearch.dart';
 import 'package:eva_pharma/models/Opportunity.dart';
 import 'package:eva_pharma/ui/widgets/DropDown.dart';
@@ -47,7 +47,6 @@ class _ExploreScreenState extends State<ExploreScreen> {
   void initState() {
     super.initState();
     _oppBloc = OppBloc();
-    print(_oppBloc.oppList.length);
   }
 
   final divider = Container(height: 1, color: Colors.black12);
