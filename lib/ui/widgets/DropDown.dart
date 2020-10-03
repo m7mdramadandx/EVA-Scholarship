@@ -1,42 +1,19 @@
-import 'package:eva_pharma/models/Menu.dart';
 import 'package:flutter/material.dart';
 
 import 'colors.dart';
 
 class DropDownMenu extends StatefulWidget {
-  final List<SpecialtiesMenu> dropDownList;
-  final Function(String) onSelectionChanged; // +added
-  DropDownMenu(this.dropDownList, {this.onSelectionChanged});
+  final List<String> dropDownList;
+  final Function(String) onSelectionChanged;
+
+  DropDownMenu({this.dropDownList, this.onSelectionChanged});
 
   @override
   _DropDownMenuState createState() => _DropDownMenuState();
 }
 
 class _DropDownMenuState extends State<DropDownMenu> {
-  List<DropdownMenuItem<SpecialtiesMenu>> _dropdownMenuItems;
-
-  SpecialtiesMenu _selectedItem;
-
-  @override
-  void initState() {
-    super.initState();
-    _dropdownMenuItems = buildDropDownMenuItems(widget.dropDownList);
-    _selectedItem = _dropdownMenuItems[0].value;
-  }
-
-  List<DropdownMenuItem<SpecialtiesMenu>> buildDropDownMenuItems(
-      List listItems) {
-    List<DropdownMenuItem<SpecialtiesMenu>> items = List();
-    for (SpecialtiesMenu specialties in listItems) {
-      items.add(
-        DropdownMenuItem(
-          child: Text(specialties.speciality, overflow: TextOverflow.ellipsis),
-          value: specialties,
-        ),
-      );
-    }
-    return items;
-  }
+  String _selectedItem;
 
   @override
   Widget build(BuildContext context) {
@@ -53,16 +30,21 @@ class _DropDownMenuState extends State<DropDownMenu> {
               borderRadius: BorderRadius.circular(10.0), color: kAccentColor),
           child: DropdownButtonHideUnderline(
             child: DropdownButton(
-                hint: Text("Select you Field"),
+                hint: Text("Select you field"),
                 style: TextStyle(color: kGreyColor),
                 isDense: true,
                 elevation: 8,
                 value: _selectedItem,
-                items: _dropdownMenuItems,
+                items: widget.dropDownList
+                    .map((String value) => DropdownMenuItem(
+                          child: Text(value),
+                          value: value,
+                        ))
+                    .toList(),
                 onChanged: (value) {
                   setState(() {
                     _selectedItem = value;
-                    widget.onSelectionChanged(_selectedItem.speciality);
+                    widget.onSelectionChanged(_selectedItem);
                   });
                 }),
           ),

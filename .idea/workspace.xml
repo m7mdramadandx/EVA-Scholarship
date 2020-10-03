@@ -2,38 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="193371d1-6f89-4d27-b5e7-5d2b84c527ae" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/blocks/SearchBloc.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/models/University.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/network/MapService.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/ui/widgets/SecondryOppInfoLists.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.flutter-plugins" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/blocks/Block.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/blocks/Block.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/blocks/OppBloc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/blocks/OppBloc.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/blocks/QueryBlock.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/models/Benefits.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/models/Benefits.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/models/DataSearch.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/models/DataSearch.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/models/Eligibility.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/models/Eligibility.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/models/Menu.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/models/Menu.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/models/OppResponse.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/models/OppResponse.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/models/Place.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/models/opportunity.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/models/Opportunity.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/network/ApiProvider.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/network/ApiProvider.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/repository/OppRepository.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/repository/OppRepository.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/mainn.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/mainn.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/models/Menu.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/models/SpecialtiesMenu.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/ui/screens/DashboardScreen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/screens/DashboardScreen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ui/screens/DetailsScreen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/screens/DetailsScreen.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/ui/screens/ExploreScreen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/screens/ExploreScreen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ui/screens/FavoriteScreen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/screens/FavoriteScreen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ui/screens/OppInfoScreen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/screens/OppInfoScreen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ui/screens/HomeScreen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/screens/HomeScreen.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/ui/screens/WeatherScreen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/screens/WeatherScreen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ui/widgets/CustomListView.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/widgets/CustomListView.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/ui/widgets/DropDown.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/widgets/DropDown.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ui/widgets/OppCard.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/widgets/OppCard.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ui/widgets/OppSolidCard.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/widgets/OppSolidCard.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ui/widgets/OppTypes.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/widgets/OppTypes.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ui/widgets/PrimaryOppInfo.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/widgets/PrimaryOppInfo.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ui/widgets/SecondryOppInfo.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/widgets/SecondryOppInfo.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ui/widgets/MutiSelectChips.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/widgets/MutiSelectChips.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,26 +147,30 @@
       <screen x="0" y="30" width="1536" height="834" />
     </state>
     <state x="431" y="201" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.30.1536.834@0.30.1536.834" timestamp="1600595097055" />
+    <state width="538" height="466" key="DebuggerActiveHint" timestamp="1601724785020">
+      <screen x="0" y="30" width="1536" height="834" />
+    </state>
+    <state width="538" height="466" key="DebuggerActiveHint/0.30.1536.834@0.30.1536.834" timestamp="1601724785020" />
     <state x="272" y="190" key="FileChooserDialogImpl" timestamp="1601208637752">
       <screen x="0" y="30" width="1536" height="834" />
     </state>
     <state x="272" y="190" key="FileChooserDialogImpl/0.30.1536.834@0.30.1536.834" timestamp="1601208637752" />
-    <state width="1134" height="210" key="GridCell.Tab.0.bottom" timestamp="1601719193831">
+    <state width="1134" height="329" key="GridCell.Tab.0.bottom" timestamp="1601729700486">
       <screen x="0" y="30" width="1536" height="834" />
     </state>
-    <state width="1134" height="210" key="GridCell.Tab.0.bottom/0.30.1536.834@0.30.1536.834" timestamp="1601719193831" />
-    <state width="1134" height="210" key="GridCell.Tab.0.center" timestamp="1601719193831">
+    <state width="1134" height="329" key="GridCell.Tab.0.bottom/0.30.1536.834@0.30.1536.834" timestamp="1601729700486" />
+    <state width="1134" height="329" key="GridCell.Tab.0.center" timestamp="1601729700486">
       <screen x="0" y="30" width="1536" height="834" />
     </state>
-    <state width="1134" height="210" key="GridCell.Tab.0.center/0.30.1536.834@0.30.1536.834" timestamp="1601719193831" />
-    <state width="1134" height="210" key="GridCell.Tab.0.left" timestamp="1601719193831">
+    <state width="1134" height="329" key="GridCell.Tab.0.center/0.30.1536.834@0.30.1536.834" timestamp="1601729700486" />
+    <state width="1134" height="329" key="GridCell.Tab.0.left" timestamp="1601729700486">
       <screen x="0" y="30" width="1536" height="834" />
     </state>
-    <state width="1134" height="210" key="GridCell.Tab.0.left/0.30.1536.834@0.30.1536.834" timestamp="1601719193831" />
-    <state width="1134" height="210" key="GridCell.Tab.0.right" timestamp="1601719193831">
+    <state width="1134" height="329" key="GridCell.Tab.0.left/0.30.1536.834@0.30.1536.834" timestamp="1601729700486" />
+    <state width="1134" height="329" key="GridCell.Tab.0.right" timestamp="1601729700486">
       <screen x="0" y="30" width="1536" height="834" />
     </state>
-    <state width="1134" height="210" key="GridCell.Tab.0.right/0.30.1536.834@0.30.1536.834" timestamp="1601719193831" />
+    <state width="1134" height="329" key="GridCell.Tab.0.right/0.30.1536.834@0.30.1536.834" timestamp="1601729700486" />
     <state x="145" y="30" key="SettingsEditor" timestamp="1601626836300">
       <screen x="0" y="30" width="1536" height="834" />
     </state>

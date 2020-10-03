@@ -9,5 +9,6 @@ List<SpecialtiesMenu> specialtiesItems = [
   SpecialtiesMenu(1, "Computer Science and Engineer"),
   SpecialtiesMenu(2, "Law"),
   SpecialtiesMenu(3, "Business"),
-  SpecialtiesMenu(4, "Accountant")
+  SpecialtiesMenu(4, "Accountant"),
+  SpecialtiesMenu(5, "Oracle")
 ];

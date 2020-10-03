@@ -14,11 +14,11 @@ dependencies:
 
   cupertino_icons: ^1.0.0
   circular_bottom_navigation: ^1.0.1
+  fluttertoast: ^7.1.1
   font_awesome_flutter: ^8.8.1
   cached_network_image: ^2.3.2+1
   http: ^0.12.2
   rxdart: ^0.24.1
-  intl: ^0.16.1
 
 
 dev_dependencies:

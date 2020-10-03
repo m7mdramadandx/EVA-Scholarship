@@ -2,9 +2,9 @@ import 'package:eva_pharma/ui/widgets/colors.dart';
 import 'package:flutter/material.dart';
 
 class MultiSelectChip extends StatefulWidget {
-  final List<String> reportList;
+  final List<String> choicesList;
   final Function(List<String>) onSelectionChanged; // +added
-  MultiSelectChip(this.reportList, {this.onSelectionChanged});
+  MultiSelectChip({this.choicesList, this.onSelectionChanged});
 
   @override
   _MultiSelectChipState createState() => _MultiSelectChipState();
@@ -16,7 +16,7 @@ class _MultiSelectChipState extends State<MultiSelectChip> {
 
   _buildChoiceList() {
     List<Widget> choices = List();
-    widget.reportList.map((item) {
+    widget.choicesList.map((item) {
       choices.add(Container(
         padding: EdgeInsets.symmetric(horizontal: 8),
         child: ChoiceChip(

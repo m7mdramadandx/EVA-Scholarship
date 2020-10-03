@@ -1,4 +1,3 @@
-import 'package:eva_pharma/ui/screens/WeatherScreen.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -27,7 +26,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: WeatherScreen(),
+      body: Text("Hey"),
     );
   }
 }

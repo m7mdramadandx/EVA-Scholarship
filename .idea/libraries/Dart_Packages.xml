@@ -121,6 +121,20 @@
             </list>
           </value>
         </entry>
+        <entry key="flutter_web_plugins">
+          <value>
+            <list>
+              <option value="D:/Flutter/flutter/packages/flutter_web_plugins/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="fluttertoast">
+          <value>
+            <list>
+              <option value="D:/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/fluttertoast-7.1.1/lib" />
+            </list>
+          </value>
+        </entry>
         <entry key="font_awesome_flutter">
           <value>
             <list>
@@ -356,6 +370,7 @@
       <root url="file://D:/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/file-5.2.1/lib" />
       <root url="file://D:/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_blurhash-0.5.0/lib" />
       <root url="file://D:/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_cache_manager-1.4.2/lib" />
+      <root url="file://D:/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/fluttertoast-7.1.1/lib" />
       <root url="file://D:/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/font_awesome_flutter-8.8.1/lib" />
       <root url="file://D:/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/http-0.12.2/lib" />
       <root url="file://D:/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/http_parser-3.1.4/lib" />
@@ -389,6 +404,7 @@
       <root url="file://D:/Flutter/flutter/bin/cache/pkg/sky_engine/lib" />
       <root url="file://D:/Flutter/flutter/packages/flutter/lib" />
       <root url="file://D:/Flutter/flutter/packages/flutter_test/lib" />
+      <root url="file://D:/Flutter/flutter/packages/flutter_web_plugins/lib" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

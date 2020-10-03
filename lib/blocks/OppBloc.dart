@@ -9,15 +9,16 @@ import 'Block.dart';
 class OppBloc implements Bloc {
   Repository _repository;
 
-  final oppFetcher = PublishSubject<List<Opportunity>>();
-  StreamController _oppListController;
+  PublishSubject oppFetcher;
 
   Stream<List<Opportunity>> get opportunityList => oppFetcher.stream;
+
+  List<Opportunity> oppList = List();
 
   // StreamSink<List<Opportunity>> get opportunity2 => oppFetcher.sink;
 
   OppBloc() {
-    _oppListController = StreamController<List<Opportunity>>();
+    oppFetcher = PublishSubject<List<Opportunity>>();
     _repository = Repository();
     fetchOpportunities();
   }
@@ -25,6 +26,7 @@ class OppBloc implements Bloc {
   fetchOpportunities() async {
     List<Opportunity> oppResponse = await _repository.fetchOpp();
     oppFetcher.sink.add(oppResponse);
+    oppList = oppResponse;
   }
 
   @override

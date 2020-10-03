@@ -197,10 +197,4 @@ class _DashboardScreenState extends State<DashboardScreen> {
       ],
     );
   }
-
-  @override
-  void dispose() {
-    _oppBloc.dispose();
-    super.dispose();
-  }
 }
