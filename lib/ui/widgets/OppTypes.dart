@@ -8,7 +8,7 @@ class OppTypes extends StatefulWidget {
 }
 
 class _OppTypesState extends State<OppTypes> {
-  List<String> categories = [
+  List<String> oppType = [
     "IB",
     "Bachelor",
     "Master",
@@ -24,7 +24,7 @@ class _OppTypesState extends State<OppTypes> {
         height: 40,
         child: ListView.builder(
           scrollDirection: Axis.horizontal,
-          itemCount: categories.length,
+          itemCount: oppType.length,
           itemBuilder: (context, index) => buildCategory(index),
         ),
       ),
@@ -37,8 +37,8 @@ class _OppTypesState extends State<OppTypes> {
       child: FilterChip(
         padding: EdgeInsets.symmetric(horizontal: 8),
         label: selectedIndex == index
-            ? Text(categories[index], style: TextStyle(color: kPrimaryColor))
-            : Text(categories[index], style: TextStyle(color: Colors.white)),
+            ? Text(oppType[index], style: TextStyle(color: kPrimaryColor))
+            : Text(oppType[index], style: TextStyle(color: Colors.white)),
         backgroundColor: selectedIndex == index ? Colors.white : kPrimaryColor,
         elevation: 4,
         shape:

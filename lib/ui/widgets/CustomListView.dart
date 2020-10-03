@@ -1,7 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:eva_pharma/models/opportunity.dart';
+import 'package:eva_pharma/models/Opportunity.dart';
 import 'package:eva_pharma/ui/screens/OppInfoScreen.dart';
-import 'package:eva_pharma/ui/widgets/colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -41,7 +40,7 @@ class DashboardCard extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       Text(
-                        opportunity.universityName,
+                        opportunity.universityName ?? 'universityName',
                         style: TextStyle(
                           fontSize: 22.0,
                           fontWeight: FontWeight.w600,
@@ -53,7 +52,7 @@ class DashboardCard extends StatelessWidget {
                       ),
                       SizedBox(height: 8),
                       Text(
-                        opportunity.title,
+                        opportunity.description,
                         style: TextStyle(
                           color: kGreyColor,
                           letterSpacing: 1.2,
@@ -70,7 +69,7 @@ class DashboardCard extends StatelessWidget {
                           borderRadius: BorderRadius.circular(10.0),
                         ),
                         alignment: Alignment.center,
-                        child: Text(opportunity.deadline),
+                        child: Text(opportunity.applicationDeadline),
                       )
                     ],
                   ),
@@ -82,9 +81,10 @@ class DashboardCard extends StatelessWidget {
               child: Stack(
                 children: <Widget>[
                   Hero(
-                    tag: opportunity.imageUrl,
+                    tag: opportunity.id,
                     child: CachedNetworkImage(
-                      imageUrl: opportunity.imageUrl,
+                      imageUrl: opportunity.university.imgUrl ??
+                          'https://raw.githubusercontent.com/felangel/bloc/master/docs/assets/bloc_architecture.png',
                       width: size.width * 0.7,
                       height: size.height * 0.2,
                       imageBuilder: (context, imageProvider) => Container(
@@ -101,18 +101,18 @@ class DashboardCard extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Positioned(
-                    left: 10.0,
-                    bottom: 10.0,
-                    child: Text(
-                      opportunity.type,
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 24.0,
-                          fontWeight: FontWeight.w600,
-                          letterSpacing: 1.2),
-                    ),
-                  ),
+                  // Positioned(
+                  //   left: 10.0,
+                  //   bottom: 10.0,
+                  //   child: Text(
+                  //     opportunity.type,
+                  //     style: TextStyle(
+                  //         color: Colors.white,
+                  //         fontSize: 24.0,
+                  //         fontWeight: FontWeight.w600,
+                  //         letterSpacing: 1.2),
+                  //   ),
+                  // ),
                   Positioned(
                     right: 10.0,
                     bottom: 10.0,
@@ -125,7 +125,7 @@ class DashboardCard extends StatelessWidget {
                         child: Row(
                           children: [
                             Text(
-                              opportunity.rate.toString(),
+                              opportunity.university.rate ?? '0.0',
                               style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 18.0,

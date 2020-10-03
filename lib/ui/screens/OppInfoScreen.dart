@@ -1,10 +1,10 @@
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:eva_pharma/models/opportunity.dart';
+import 'package:eva_pharma/models/Opportunity.dart';
+import 'package:eva_pharma/ui/widgets/SecondryOppInfo.dart';
 import 'package:eva_pharma/ui/widgets/colors.dart';
 import 'package:flutter/material.dart';
 
 import '../widgets/PrimaryOppInfo.dart';
-import '../widgets/SecondryOppInfo.dart';
 
 class OppInfoScreen extends StatefulWidget {
   OppInfoScreen(this.opportunity) : super();
@@ -26,11 +26,12 @@ class _OppInfoScreenState extends State<OppInfoScreen> {
         child: Stack(
           children: <Widget>[
             Hero(
-              tag: widget.opportunity.imageUrl,
+              tag: widget.opportunity.id,
               child: CachedNetworkImage(
                   width: size.width,
                   height: size.height * 0.35,
-                  imageUrl: widget.opportunity.imageUrl,
+                  imageUrl: widget.opportunity.university.imgUrl ??
+                      'https://raw.githubusercontent.com/felangel/bloc/master/docs/assets/bloc_architecture.png',
                   imageBuilder: (context, imageProvider) => Container(
                           decoration: BoxDecoration(
                               image: DecorationImage(

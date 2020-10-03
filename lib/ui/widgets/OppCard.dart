@@ -1,5 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:eva_pharma/models/opportunity.dart';
+import 'package:eva_pharma/models/Opportunity.dart';
 import 'package:eva_pharma/ui/screens/OppInfoScreen.dart';
 import 'package:flutter/material.dart';
 
@@ -31,7 +31,7 @@ class OppCard extends StatelessWidget {
                     BorderRadius.horizontal(left: Radius.circular(20)),
               ),
               child: Padding(
-                padding: EdgeInsets.fromLTRB(100.0, 10.0, 16.0, 10.0),
+                padding: EdgeInsets.fromLTRB(100.0, 5.0, 10.0, 5.0),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -82,7 +82,7 @@ class OppCard extends StatelessWidget {
                         borderRadius: BorderRadius.circular(10.0),
                       ),
                       alignment: Alignment.center,
-                      child: Text(_opportunity.deadline),
+                      child: Text(_opportunity.applicationDeadline),
                     )
                   ],
                 ),
@@ -93,9 +93,10 @@ class OppCard extends StatelessWidget {
               top: 16.0,
               bottom: 16.0,
               child: Hero(
-                tag: _opportunity.imageUrl,
+                tag: _opportunity.id,
                 child: CachedNetworkImage(
-                  imageUrl: _opportunity.imageUrl,
+                  imageUrl: _opportunity.university.imgUrl ??
+                      'https://raw.githubusercontent.com/felangel/bloc/master/docs/assets/bloc_architecture.png',
                   width: 110,
                   imageBuilder: (context, imageProvider) => Container(
                     decoration: BoxDecoration(

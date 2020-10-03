@@ -4,32 +4,30 @@ import 'package:flutter/material.dart';
 import 'colors.dart';
 
 class DropDownMenu extends StatefulWidget {
+  final List<SpecialtiesMenu> dropDownList;
+  final Function(String) onSelectionChanged; // +added
+  DropDownMenu(this.dropDownList, {this.onSelectionChanged});
+
   @override
   _DropDownMenuState createState() => _DropDownMenuState();
 }
 
 class _DropDownMenuState extends State<DropDownMenu> {
-  List<Specialties> _dropdownItems = [
-    Specialties(1, "Computer Science and Engineer"),
-    Specialties(2, "Law"),
-    Specialties(3, "Business"),
-    Specialties(4, "Accountant")
-  ];
+  List<DropdownMenuItem<SpecialtiesMenu>> _dropdownMenuItems;
 
-  List<DropdownMenuItem<Specialties>> _dropdownMenuItems;
-
-  Specialties _selectedItem;
+  SpecialtiesMenu _selectedItem;
 
   @override
   void initState() {
     super.initState();
-    _dropdownMenuItems = buildDropDownMenuItems(_dropdownItems);
+    _dropdownMenuItems = buildDropDownMenuItems(widget.dropDownList);
     _selectedItem = _dropdownMenuItems[0].value;
   }
 
-  List<DropdownMenuItem<Specialties>> buildDropDownMenuItems(List listItems) {
-    List<DropdownMenuItem<Specialties>> items = List();
-    for (Specialties specialties in listItems) {
+  List<DropdownMenuItem<SpecialtiesMenu>> buildDropDownMenuItems(
+      List listItems) {
+    List<DropdownMenuItem<SpecialtiesMenu>> items = List();
+    for (SpecialtiesMenu specialties in listItems) {
       items.add(
         DropdownMenuItem(
           child: Text(specialties.speciality, overflow: TextOverflow.ellipsis),
@@ -64,7 +62,7 @@ class _DropDownMenuState extends State<DropDownMenu> {
                 onChanged: (value) {
                   setState(() {
                     _selectedItem = value;
-                    print(_selectedItem.speciality);
+                    widget.onSelectionChanged(_selectedItem.speciality);
                   });
                 }),
           ),

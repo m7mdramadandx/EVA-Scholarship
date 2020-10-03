@@ -1,12 +1,27 @@
+import 'package:eva_pharma/blocks/OppBloc.dart';
+import 'package:eva_pharma/blocks/SearchBloc.dart';
 import 'package:eva_pharma/models/DataSearch.dart';
-import 'package:eva_pharma/models/opportunity.dart';
+import 'package:eva_pharma/models/Opportunity.dart';
 import 'package:eva_pharma/ui/widgets/CustomListView.dart';
 import 'package:eva_pharma/ui/widgets/colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class DashboardScreen extends StatelessWidget {
+class DashboardScreen extends StatefulWidget {
   DashboardScreen() : super();
+
+  @override
+  _DashboardScreenState createState() => _DashboardScreenState();
+}
+
+class _DashboardScreenState extends State<DashboardScreen> {
+  OppBloc _oppBloc;
+
+  @override
+  void initState() {
+    super.initState();
+    _oppBloc = OppBloc();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -53,8 +68,11 @@ class DashboardScreen extends StatelessWidget {
                         child: Row(children: <Widget>[
                           Expanded(
                               child: TextField(
-                            onTap: () => showSearch(
-                                context: context, delegate: DataSearch()),
+                            onTap: () {
+                              showSearch(
+                                  context: context, delegate: DataSearch());
+                              universityBloc.fetchUniversities();
+                            },
                             readOnly: true,
                             decoration: InputDecoration(
                                 border: InputBorder.none,
@@ -69,89 +87,120 @@ class DashboardScreen extends StatelessWidget {
               ),
             ),
             SizedBox(height: 20.0),
-            Column(
-              children: [
-                Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 20.0),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: <Widget>[
-                      Text("Top Rated",
-                          style: TextStyle(
-                            fontSize: 22.0,
-                            letterSpacing: 1.5,
-                          )),
-                      Container(
-                        padding: EdgeInsets.all(5.0),
-                        width: 60,
-                        decoration: BoxDecoration(
-                          color: kPrimaryColor,
-                          borderRadius: BorderRadius.circular(10.0),
-                        ),
-                        alignment: Alignment.center,
-                        child: Text(
-                          'See All',
-                          style: TextStyle(color: Colors.white),
-                        ),
-                      )
-                    ],
-                  ),
-                ),
-                Container(
-                  height: size.height * 0.4,
-                  child: ListView.builder(
-                    itemCount: opportunityList.length,
-                    scrollDirection: Axis.horizontal,
-                    itemBuilder: (context, index) =>
-                        DashboardCard(opportunityList[index]),
-                  ),
-                ),
-              ],
-            ),
-            SizedBox(height: 20.0),
-            Column(
-              children: [
-                Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 20.0),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: <Widget>[
-                      Text("Most Popular",
-                          style: TextStyle(
-                            fontSize: 22.0,
-                            letterSpacing: 1.5,
-                          )),
-                      Container(
-                        padding: EdgeInsets.all(5.0),
-                        width: 60,
-                        decoration: BoxDecoration(
-                          color: kPrimaryColor,
-                          borderRadius: BorderRadius.circular(10.0),
-                        ),
-                        alignment: Alignment.center,
-                        child: Text(
-                          'See All',
-                          style: TextStyle(color: Colors.white),
-                        ),
-                      )
-                    ],
-                  ),
-                ),
-                Container(
-                  height: size.height * 0.4,
-                  child: ListView.builder(
-                    itemCount: opportunityList2.length,
-                    scrollDirection: Axis.horizontal,
-                    itemBuilder: (context, index) =>
-                        DashboardCard(opportunityList2[index]),
-                  ),
-                ),
-              ],
-            ),
-            SizedBox(height: 40.0),
+            fetchData()
           ]),
         ),
       ),
     );
+  }
+
+  Widget fetchData() {
+    return StreamBuilder<List<Opportunity>>(
+        stream: _oppBloc.opportunityList,
+        builder: (context, AsyncSnapshot<List<Opportunity>> snapshot) {
+          if (snapshot.hasData) {
+            return _buildDashboard(snapshot.data, context);
+          } else if (snapshot.hasError) {
+            return Text(snapshot.error.toString());
+          }
+          return CircularProgressIndicator(backgroundColor: kPrimaryColor);
+        });
+  }
+
+  Widget _buildDashboard(List<Opportunity> data, BuildContext context) {
+    Size size = MediaQuery.of(context).size;
+    return Column(
+      children: [
+        Column(
+          children: [
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 20.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: <Widget>[
+                  Text("Top Rated",
+                      style: TextStyle(
+                        fontSize: 22.0,
+                        letterSpacing: 1.5,
+                      )),
+                  Container(
+                    padding: EdgeInsets.all(5.0),
+                    width: 60,
+                    decoration: BoxDecoration(
+                      color: kPrimaryColor,
+                      borderRadius: BorderRadius.circular(10.0),
+                    ),
+                    alignment: Alignment.center,
+                    child: Text(
+                      'See All',
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  )
+                ],
+              ),
+            ),
+            Container(
+              height: size.height * 0.4,
+              child: RefreshIndicator(
+                onRefresh: () => _oppBloc.fetchOpportunities(),
+                color: kPrimaryColor,
+                child: ListView.builder(
+                  physics: const AlwaysScrollableScrollPhysics(),
+                  itemCount: data.length,
+                  scrollDirection: Axis.horizontal,
+                  itemBuilder: (context, index) => DashboardCard(data[index]),
+                ),
+              ),
+            ),
+          ],
+        ),
+        SizedBox(height: 20.0),
+        Column(
+          children: [
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 20.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: <Widget>[
+                  Text("Most Popular",
+                      style: TextStyle(
+                        fontSize: 22.0,
+                        letterSpacing: 1.5,
+                      )),
+                  Container(
+                    padding: EdgeInsets.all(5.0),
+                    width: 60,
+                    decoration: BoxDecoration(
+                      color: kPrimaryColor,
+                      borderRadius: BorderRadius.circular(10.0),
+                    ),
+                    alignment: Alignment.center,
+                    child: Text(
+                      'See All',
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  )
+                ],
+              ),
+            ),
+            // Container(
+            //   height: size.height * 0.4,
+            //   child: ListView.builder(
+            //     itemCount: data.length,
+            //     scrollDirection: Axis.horizontal,
+            //     itemBuilder: (context, index) => DashboardCard(data[index]),
+            //   ),
+            // ),
+          ],
+        ),
+        SizedBox(height: 40.0),
+      ],
+    );
+  }
+
+  @override
+  void dispose() {
+    _oppBloc.dispose();
+    super.dispose();
   }
 }

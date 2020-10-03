@@ -1,4 +1,4 @@
-import 'package:eva_pharma/models/opportunity.dart';
+import 'package:eva_pharma/models/Opportunity.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 

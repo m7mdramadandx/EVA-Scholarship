@@ -1,24 +1,36 @@
-import 'package:eva_pharma/models/Place.dart';
+import 'dart:async';
+
+import 'package:eva_pharma/models/Opportunity.dart';
 import 'package:eva_pharma/repository/OppRepository.dart';
 import 'package:rxdart/rxdart.dart';
 
 import 'Block.dart';
 
-class PlaceBloc implements Block {
-  Repository _repository = Repository();
-  final _weatherFetcher = PublishSubject<Place>();
+class OppBloc implements Bloc {
+  Repository _repository;
 
-  Stream<Place> get weather => _weatherFetcher.stream;
+  final oppFetcher = PublishSubject<List<Opportunity>>();
+  StreamController _oppListController;
 
-  fetchLondonWeather() async {
-    Place _weatherResponse = await _repository.fetchLondonWeather();
-    _weatherFetcher.sink.add(_weatherResponse);
+  Stream<List<Opportunity>> get opportunityList => oppFetcher.stream;
+
+  // StreamSink<List<Opportunity>> get opportunity2 => oppFetcher.sink;
+
+  OppBloc() {
+    _oppListController = StreamController<List<Opportunity>>();
+    _repository = Repository();
+    fetchOpportunities();
+  }
+
+  fetchOpportunities() async {
+    List<Opportunity> oppResponse = await _repository.fetchOpp();
+    oppFetcher.sink.add(oppResponse);
   }
 
   @override
   void dispose() {
-    _weatherFetcher.close();
+    oppFetcher.close();
   }
 }
 
-final placeBloc = PlaceBloc();
+final oppBloc = OppBloc();

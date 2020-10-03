@@ -1,4 +1,4 @@
-import 'package:eva_pharma/models/opportunity.dart';
+import 'package:eva_pharma/models/Opportunity.dart';
 import 'package:eva_pharma/ui/widgets/colors.dart';
 import 'package:flutter/material.dart';
 
@@ -32,13 +32,13 @@ class PrimaryOppInfo extends StatelessWidget {
                     header('Description'),
                     info('${opportunity.description}'),
                     header('Specialties'),
-                    info('${opportunity.specialties}'),
+                    info('${opportunity.specialization}'),
                     header('Funding'),
-                    info('${opportunity.fundingType}'),
+                    info('${opportunity.fundType}'),
                     header('Duration'),
                     info('${opportunity.duration}'),
                     header('Deadline'),
-                    info('${opportunity.deadline}'),
+                    info('${opportunity.applicationDeadline}'),
                   ]))
         ]);
   }

@@ -1,9 +1,11 @@
 class Eligibility {
-  final String eligibilityName;
-  final String details;
+  final String gender;
+  final int age;
+  final String other;
 
   Eligibility({
-    this.eligibilityName,
-    this.details,
+    this.gender,
+    this.age,
+    this.other,
   });
 }

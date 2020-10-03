@@ -2,10 +2,38 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="193371d1-6f89-4d27-b5e7-5d2b84c527ae" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/lib/blocks/SearchBloc.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/models/University.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/network/MapService.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/ui/widgets/SecondryOppInfoLists.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/blocks/WeatherBloc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/blocks/OppBloc.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/models/WeatherResponse.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/models/OppResponse.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/blocks/Block.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/blocks/Block.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/blocks/OppBloc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/blocks/OppBloc.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/blocks/QueryBlock.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/models/Benefits.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/models/Benefits.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/models/DataSearch.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/models/DataSearch.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/models/Eligibility.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/models/Eligibility.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/models/Menu.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/models/Menu.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/models/OppResponse.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/models/OppResponse.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/models/Place.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/models/opportunity.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/models/Opportunity.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/network/ApiProvider.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/network/ApiProvider.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/repository/OppRepository.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/repository/OppRepository.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ui/screens/DashboardScreen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/screens/DashboardScreen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ui/screens/DetailsScreen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/screens/DetailsScreen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ui/screens/ExploreScreen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/screens/ExploreScreen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ui/screens/FavoriteScreen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/screens/FavoriteScreen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ui/screens/OppInfoScreen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/screens/OppInfoScreen.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/ui/screens/WeatherScreen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/screens/WeatherScreen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ui/widgets/CustomListView.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/widgets/CustomListView.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ui/widgets/DropDown.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/widgets/DropDown.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ui/widgets/OppCard.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/widgets/OppCard.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ui/widgets/OppSolidCard.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/widgets/OppSolidCard.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ui/widgets/OppTypes.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/widgets/OppTypes.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ui/widgets/PrimaryOppInfo.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/widgets/PrimaryOppInfo.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ui/widgets/SecondryOppInfo.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/widgets/SecondryOppInfo.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,23 +76,24 @@
     <property name="add_unversioned_files" value="$PROJECT_DIR$/pubspec.lock" />
     <property name="dart.analysis.tool.window.force.activate" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Feen" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/blocks" />
     <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="flutter.settings" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\flutterProjects\EVA-Scholarship\lib\network" />
+      <recent name="D:\flutterProjects\EVA-Scholarship\lib\repository" />
       <recent name="D:\flutterProjects\eva_pharma\lib\widgets" />
       <recent name="D:\flutterProjects\eva_pharma\lib\screens" />
       <recent name="D:\flutterProjects\eva_pharma\lib\models" />
-      <recent name="D:\flutterProjects\eva_pharma\lib\screens\components" />
-      <recent name="D:\flutterProjects\eva_pharma" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\flutterProjects\EVA-Scholarship\lib\repository" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\flutterProjects\EVA-Scholarship\lib\blocks" />
+      <recent name="D:\flutterProjects\EVA-Scholarship\lib\ui\widgets" />
       <recent name="D:\flutterProjects\eva_pharma\lib\widgets" />
       <recent name="D:\flutterProjects\eva_pharma\lib\screens" />
       <recent name="D:\flutterProjects\eva_pharma\lib\models" />
@@ -106,6 +135,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/inject.dart" />
+    </ignored-roots>
   </component>
   <component name="WindowStateProjectService">
     <state x="187" y="112" key="#Plugins" timestamp="1600337780277">
@@ -116,10 +148,10 @@
       <screen x="0" y="30" width="1536" height="834" />
     </state>
     <state x="49" y="108" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.30.1536.834@0.30.1536.834" timestamp="1600346091149" />
-    <state x="408" y="169" key="#com.intellij.ide.util.MemberChooser" timestamp="1600857150709">
+    <state x="408" y="169" key="#com.intellij.ide.util.MemberChooser" timestamp="1601660559230">
       <screen x="0" y="30" width="1536" height="834" />
     </state>
-    <state x="408" y="169" key="#com.intellij.ide.util.MemberChooser/0.30.1536.834@0.30.1536.834" timestamp="1600857150709" />
+    <state x="408" y="169" key="#com.intellij.ide.util.MemberChooser/0.30.1536.834@0.30.1536.834" timestamp="1601660559230" />
     <state x="456" y="158" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog" timestamp="1600337933238">
       <screen x="0" y="30" width="1536" height="834" />
     </state>
@@ -136,26 +168,26 @@
       <screen x="0" y="30" width="1536" height="834" />
     </state>
     <state x="272" y="190" key="FileChooserDialogImpl/0.30.1536.834@0.30.1536.834" timestamp="1601208637752" />
-    <state width="1012" height="210" key="GridCell.Tab.0.bottom" timestamp="1601208639655">
+    <state width="1134" height="210" key="GridCell.Tab.0.bottom" timestamp="1601719193831">
       <screen x="0" y="30" width="1536" height="834" />
     </state>
-    <state width="1012" height="210" key="GridCell.Tab.0.bottom/0.30.1536.834@0.30.1536.834" timestamp="1601208639655" />
-    <state width="1012" height="210" key="GridCell.Tab.0.center" timestamp="1601208639655">
+    <state width="1134" height="210" key="GridCell.Tab.0.bottom/0.30.1536.834@0.30.1536.834" timestamp="1601719193831" />
+    <state width="1134" height="210" key="GridCell.Tab.0.center" timestamp="1601719193831">
       <screen x="0" y="30" width="1536" height="834" />
     </state>
-    <state width="1012" height="210" key="GridCell.Tab.0.center/0.30.1536.834@0.30.1536.834" timestamp="1601208639655" />
-    <state width="1012" height="210" key="GridCell.Tab.0.left" timestamp="1601208639655">
+    <state width="1134" height="210" key="GridCell.Tab.0.center/0.30.1536.834@0.30.1536.834" timestamp="1601719193831" />
+    <state width="1134" height="210" key="GridCell.Tab.0.left" timestamp="1601719193831">
       <screen x="0" y="30" width="1536" height="834" />
     </state>
-    <state width="1012" height="210" key="GridCell.Tab.0.left/0.30.1536.834@0.30.1536.834" timestamp="1601208639655" />
-    <state width="1012" height="210" key="GridCell.Tab.0.right" timestamp="1601208639655">
+    <state width="1134" height="210" key="GridCell.Tab.0.left/0.30.1536.834@0.30.1536.834" timestamp="1601719193831" />
+    <state width="1134" height="210" key="GridCell.Tab.0.right" timestamp="1601719193831">
       <screen x="0" y="30" width="1536" height="834" />
     </state>
-    <state width="1012" height="210" key="GridCell.Tab.0.right/0.30.1536.834@0.30.1536.834" timestamp="1601208639655" />
-    <state x="145" y="30" key="SettingsEditor" timestamp="1601194452143">
+    <state width="1134" height="210" key="GridCell.Tab.0.right/0.30.1536.834@0.30.1536.834" timestamp="1601719193831" />
+    <state x="145" y="30" key="SettingsEditor" timestamp="1601626836300">
       <screen x="0" y="30" width="1536" height="834" />
     </state>
-    <state x="145" y="30" key="SettingsEditor/0.30.1536.834@0.30.1536.834" timestamp="1601194452143" />
+    <state x="145" y="30" key="SettingsEditor/0.30.1536.834@0.30.1536.834" timestamp="1601626836300" />
     <state x="-37" y="140" width="1127" height="634" key="com.android.tools.idea.avdmanager.AvdListDialog" timestamp="1601194581579">
       <screen x="0" y="30" width="1536" height="834" />
     </state>
@@ -168,10 +200,10 @@
       <screen x="0" y="30" width="1536" height="834" />
     </state>
     <state x="155" y="68" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.30.1536.834@0.30.1536.834" timestamp="1600677095155" />
-    <state x="251" y="210" width="672" height="677" key="run.anything.popup" timestamp="1600903531828">
+    <state x="251" y="210" width="672" height="677" key="run.anything.popup" timestamp="1601656530094">
       <screen x="0" y="30" width="1536" height="834" />
     </state>
-    <state x="251" y="210" width="672" height="677" key="run.anything.popup/0.30.1536.834@0.30.1536.834" timestamp="1600903531828" />
+    <state x="251" y="210" width="672" height="677" key="run.anything.popup/0.30.1536.834@0.30.1536.834" timestamp="1601656530094" />
     <state x="258" y="186" width="672" height="678" key="search.everywhere.popup" timestamp="1600605224911">
       <screen x="0" y="30" width="1536" height="834" />
     </state>

@@ -1,7 +1,16 @@
-import 'Place.dart';
+import 'package:eva_pharma/models/Opportunity.dart';
+import 'package:eva_pharma/models/University.dart';
 
-class PlaceResponse {
-  List<Place> parseResults(List<dynamic> list) {
-    return list.map((i) => Place.fromJson(i)).toList();
+class OppResponse {
+  final List<Opportunity> opportunity;
+
+  OppResponse(this.opportunity);
+
+  static List<Opportunity> parseOpportunities(List<dynamic> list) {
+    return list.map((i) => Opportunity.fromJson(i)).toList();
+  }
+
+  static List<University> parseUniversities(List<dynamic> list) {
+    return list.map((i) => University.fromJson(i)).toList();
   }
 }

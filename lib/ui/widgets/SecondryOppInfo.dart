@@ -1,9 +1,6 @@
 import 'package:eva_pharma/models/Benefits.dart';
 import 'package:eva_pharma/models/Eligibility.dart';
-import 'package:eva_pharma/models/RequiredDegree.dart';
-import 'package:eva_pharma/models/RequiredHighSchoolDegree.dart';
-import 'package:eva_pharma/models/RequiredTests.dart';
-import 'package:eva_pharma/models/opportunity.dart';
+import 'package:eva_pharma/models/Opportunity.dart';
 import 'package:eva_pharma/ui/widgets/colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -33,225 +30,229 @@ class SecondaryOppInfo extends StatelessWidget {
                   children: <Widget>[
                     eligibility(opportunity.eligibility),
                     SizedBox(height: 16),
-                    requiredDegree(opportunity.requiredDegree),
-                    SizedBox(height: 16),
-                    requiredSchoolDegree(opportunity.requiredSchoolDegree),
-                    SizedBox(height: 16),
-                    requiredTests(opportunity.requiredTests),
+                    requiredTests(),
                     SizedBox(height: 16),
                     benefits(opportunity.benefits),
                   ]))
         ]);
   }
 
-  Widget requiredDegree(List<RequiredDegree> requiredDegree) {
-    return requiredDegree.isEmpty
-        ? Container()
-        : Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              header('Required Degree'),
-              SizedBox(height: 4),
-              ...List.generate(requiredDegree.length, (index) {
-                return Padding(
-                    padding: EdgeInsets.only(left: 10),
-                    child: Column(
-                      children: [
-                        Row(children: [
-                          Expanded(
-                            flex: 40,
-                            child: Text(requiredDegree[index].degreeType,
-                                style: TextStyle(
-                                    color: kPrimaryColor,
-                                    height: 1.5,
-                                    fontWeight: FontWeight.w500)),
-                          ),
-                          SizedBox(width: 4),
-                          Expanded(
-                            flex: 80,
-                            child: Text(requiredDegree[index].constrains,
-                                style: TextStyle(height: 1.5)),
-                          )
-                        ]),
-                        Padding(
-                          padding: const EdgeInsets.symmetric(vertical: 2),
-                          child: divider,
-                        ),
-                      ],
-                    ));
-              }),
-            ],
-          );
-  }
-
-  Widget requiredSchoolDegree(List<RequiredSchoolDegree> requiredSchoolDegree) {
-    return requiredSchoolDegree.isEmpty
-        ? Container()
-        : Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              header('Required High School Degree'),
-              SizedBox(height: 4),
-              ...List.generate(requiredSchoolDegree.length, (index) {
-                return Padding(
-                    padding: EdgeInsets.only(left: 10),
-                    child: Column(
-                      children: [
-                        Row(children: [
-                          Expanded(
-                            flex: 40,
-                            child: Text(requiredSchoolDegree[index].schoolType,
-                                style: TextStyle(
-                                    color: kPrimaryColor,
-                                    height: 1.5,
-                                    fontWeight: FontWeight.w500)),
-                          ),
-                          SizedBox(width: 4),
-                          Expanded(
-                            flex: 80,
-                            child: Text(requiredSchoolDegree[index].constrains,
-                                style: TextStyle(height: 1.5)),
-                          )
-                        ]),
-                        Padding(
-                          padding: const EdgeInsets.symmetric(vertical: 2),
-                          child: divider,
-                        ),
-                      ],
-                    ));
-              }),
-            ],
-          );
-  }
-
-  Widget benefits(List<Benefits> benefits) {
-    return benefits.isEmpty
+  Widget benefits(Benefits benefits) {
+    return benefits == null
         ? Container()
         : Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               header('Benefits'),
               SizedBox(height: 4),
-              ...List.generate(benefits.length, (index) {
-                return Padding(
-                    padding: EdgeInsets.only(left: 10),
-                    child: Column(
-                      children: [
-                        Row(children: [
-                          Expanded(
-                            flex: 40,
-                            child: Text(benefits[index].benefitName,
-                                style: TextStyle(
-                                    color: kPrimaryColor,
-                                    height: 1.5,
-                                    fontWeight: FontWeight.w500)),
-                          ),
-                          SizedBox(width: 4),
-                          Expanded(
-                            flex: 80,
-                            child: Text(benefits[index].details,
-                                style: TextStyle(height: 1.5)),
-                          )
-                        ]),
-                        Padding(
-                          padding: const EdgeInsets.symmetric(vertical: 2),
-                          child: divider,
-                        ),
-                      ],
-                    ));
-              }),
+              Column(
+                children: [
+                  Row(children: [
+                    Expanded(
+                      flex: 40,
+                      child: Text('Medical',
+                          style: TextStyle(
+                              color: kPrimaryColor,
+                              height: 1.5,
+                              fontWeight: FontWeight.w500)),
+                    ),
+                    SizedBox(width: 4),
+                    Expanded(
+                      flex: 80,
+                      child:
+                          Text(benefits.medical, style: TextStyle(height: 1.5)),
+                    )
+                  ]),
+                  Row(children: [
+                    Expanded(
+                      flex: 40,
+                      child: Text('Salary',
+                          style: TextStyle(
+                              color: kPrimaryColor,
+                              height: 1.5,
+                              fontWeight: FontWeight.w500)),
+                    ),
+                    SizedBox(width: 4),
+                    Expanded(
+                      flex: 80,
+                      child:
+                          Text(benefits.salary, style: TextStyle(height: 1.5)),
+                    )
+                  ]),
+                  Row(children: [
+                    Expanded(
+                      flex: 40,
+                      child: Text('Accommodation',
+                          style: TextStyle(
+                              color: kPrimaryColor,
+                              height: 1.5,
+                              fontWeight: FontWeight.w500)),
+                    ),
+                    SizedBox(width: 4),
+                    Expanded(
+                      flex: 80,
+                      child: Text(benefits.accommodation,
+                          style: TextStyle(height: 1.5)),
+                    )
+                  ]),
+                  Row(children: [
+                    Expanded(
+                      flex: 40,
+                      child: Text('Prize',
+                          style: TextStyle(
+                              color: kPrimaryColor,
+                              height: 1.5,
+                              fontWeight: FontWeight.w500)),
+                    ),
+                    SizedBox(width: 4),
+                    Expanded(
+                      flex: 80,
+                      child:
+                          Text(benefits.prize, style: TextStyle(height: 1.5)),
+                    )
+                  ]),
+                  Row(children: [
+                    Expanded(
+                      flex: 40,
+                      child: Text('Other',
+                          style: TextStyle(
+                              color: kPrimaryColor,
+                              height: 1.5,
+                              fontWeight: FontWeight.w500)),
+                    ),
+                    SizedBox(width: 4),
+                    Expanded(
+                      flex: 80,
+                      child:
+                          Text(benefits.other, style: TextStyle(height: 1.5)),
+                    )
+                  ]),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 2),
+                    child: divider,
+                  ),
+                ],
+              )
             ],
           );
   }
 
-  Widget requiredTests(List<RequiredTests> requiredTests) {
-    return requiredTests.isEmpty
-        ? Container()
-        : Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              header('Required Tests'),
-              SizedBox(height: 4),
-              ...List.generate(requiredTests.length, (index) {
-                return Padding(
-                    padding: EdgeInsets.only(left: 10),
-                    child: Column(
-                      children: [
-                        Row(children: [
-                          Expanded(
-                            flex: 40,
-                            child: Text(requiredTests[index].testName,
-                                style: TextStyle(
-                                    color: kPrimaryColor,
-                                    height: 1.5,
-                                    fontWeight: FontWeight.w500)),
-                          ),
-                          SizedBox(width: 4),
-                          Expanded(
-                            flex: 80,
-                            child: Text(requiredTests[index].score,
-                                style: TextStyle(height: 1.5)),
-                          )
-                        ]),
-                        Padding(
-                          padding: const EdgeInsets.symmetric(vertical: 2),
-                          child: divider,
-                        ),
-                      ],
-                    ));
-              }),
-            ],
-          );
+  Widget requiredTests() {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        header('Required Tests'),
+        SizedBox(height: 4),
+        Column(
+          children: [
+            Row(children: [
+              Expanded(
+                flex: 40,
+                child: Text('Ielts',
+                    style: TextStyle(
+                        color: kPrimaryColor,
+                        height: 1.5,
+                        fontWeight: FontWeight.w500)),
+              ),
+              SizedBox(width: 4),
+              Expanded(
+                flex: 80,
+                child: Text(opportunity.ieltsLevel.toString(),
+                    style: TextStyle(height: 1.5)),
+              )
+            ]),
+            Row(children: [
+              Expanded(
+                flex: 40,
+                child: Text('Toefl',
+                    style: TextStyle(
+                        color: kPrimaryColor,
+                        height: 1.5,
+                        fontWeight: FontWeight.w500)),
+              ),
+              SizedBox(width: 4),
+              Expanded(
+                flex: 80,
+                child: Text(opportunity.toeflLevel.toString(),
+                    style: TextStyle(height: 1.5)),
+              )
+            ]),
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 2),
+              child: divider,
+            ),
+          ],
+        )
+      ],
+    );
   }
 
-  Widget eligibility(List<Eligibility> eligibility) {
-    return eligibility.isEmpty
+  Widget eligibility(Eligibility eligibility) {
+    return eligibility == null
         ? Container()
         : Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               header('Eligibility'),
               SizedBox(height: 4),
-              ...List.generate(eligibility.length, (index) {
-                return Padding(
-                    padding: EdgeInsets.only(left: 10),
-                    child: Column(
-                      children: [
-                        Row(children: [
-                          Expanded(
-                            flex: 40,
-                            child: Text(eligibility[index].eligibilityName,
-                                style: TextStyle(
-                                    color: kPrimaryColor,
-                                    height: 1.5,
-                                    fontWeight: FontWeight.w500)),
-                          ),
-                          SizedBox(width: 4),
-                          Expanded(
-                            flex: 80,
-                            child: Text(eligibility[index].details,
-                                style: TextStyle(height: 1.5)),
-                          )
-                        ]),
-                        Padding(
-                          padding: const EdgeInsets.symmetric(vertical: 2),
-                          child: divider,
-                        ),
-                      ],
-                    ));
-              }),
+              Column(
+                children: [
+                  Row(children: [
+                    Expanded(
+                      flex: 40,
+                      child: Text('Gender',
+                          style: TextStyle(
+                              color: kPrimaryColor,
+                              height: 1.5,
+                              fontWeight: FontWeight.w500)),
+                    ),
+                    SizedBox(width: 4),
+                    Expanded(
+                      flex: 80,
+                      child: Text(eligibility.gender,
+                          style: TextStyle(height: 1.5)),
+                    )
+                  ]),
+                  Row(children: [
+                    Expanded(
+                      flex: 40,
+                      child: Text('Age',
+                          style: TextStyle(
+                              color: kPrimaryColor,
+                              height: 1.5,
+                              fontWeight: FontWeight.w500)),
+                    ),
+                    SizedBox(width: 4),
+                    Expanded(
+                      flex: 80,
+                      child: Text(eligibility.age.toString(),
+                          style: TextStyle(height: 1.5)),
+                    )
+                  ]),
+                  Row(children: [
+                    Expanded(
+                      flex: 40,
+                      child: Text('Other',
+                          style: TextStyle(
+                              color: kPrimaryColor,
+                              height: 1.5,
+                              fontWeight: FontWeight.w500)),
+                    ),
+                    SizedBox(width: 4),
+                    Expanded(
+                      flex: 80,
+                      child: Text(eligibility.other,
+                          style: TextStyle(height: 1.5)),
+                    )
+                  ]),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 2),
+                    child: divider,
+                  ),
+                ],
+              )
             ],
           );
-  }
-
-  Widget info(String text) {
-    return Padding(
-      padding: const EdgeInsets.fromLTRB(10, 5, 0, 20),
-      child: Text(
-        text,
-        style: TextStyle(height: 1.5),
-      ),
-    );
   }
 
   Widget header(String header) {

@@ -1,5 +1,7 @@
+import 'package:eva_pharma/blocks/OppBloc.dart';
 import 'package:eva_pharma/models/DataSearch.dart';
-import 'package:eva_pharma/models/opportunity.dart';
+import 'package:eva_pharma/models/Menu.dart';
+import 'package:eva_pharma/models/Opportunity.dart';
 import 'package:eva_pharma/ui/widgets/DropDown.dart';
 import 'package:eva_pharma/ui/widgets/MutiSelectChips.dart';
 import 'package:eva_pharma/ui/widgets/OppCard.dart';
@@ -14,28 +16,29 @@ class ExploreScreen extends StatefulWidget {
 }
 
 class _ExploreScreenState extends State<ExploreScreen> {
-  int _defaultChoiceIndex;
-
-  List<String> selectedChoices = List();
   Opportunity opportunity;
+  OppBloc _oppBloc;
 
-  List<String> reportList = new List();
+  List<String> selectedOppType = List();
+  List<String> selectedFundingType = List();
+  String selectedFieldItem = '';
+  List<String> oppType = [
+    "IB",
+    "Bachelor",
+    "Master",
+    "PHD",
+  ];
 
-  List<String> reportList2 = [
-    "Funded",
-    "fully",
-    "not",
+  List<String> fundingType = [
+    "fully funded",
+    "No Funding",
     "partially",
     "awarded",
   ];
 
   void initState() {
     super.initState();
-    _defaultChoiceIndex = 0;
-
-    opportunityList.forEach((element) {
-      reportList.add(element.type);
-    });
+    _oppBloc = OppBloc();
   }
 
   final divider = Container(height: 1, color: Colors.black12);
@@ -43,59 +46,73 @@ class _ExploreScreenState extends State<ExploreScreen> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-
-    Dialog errorDialog = Dialog(
+    Dialog filterDialog = Dialog(
       insetPadding: EdgeInsets.all(8),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12.0)),
       child: Container(
-        height: size.height * 0.5,
-        width: size.width * 0.8,
+        height: size.height * 0.6,
+        width: size.width * 0.85,
         child: Padding(
           padding: const EdgeInsets.all(8.0),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              MultiSelectChip(
-                reportList,
-                onSelectionChanged: (selectedList) {
-                  setState(() {
-                    selectedChoices = selectedList;
-                  });
-                },
-              ),
-              Padding(padding: EdgeInsets.all(8), child: divider),
-              DropDownMenu(),
-              Padding(padding: const EdgeInsets.all(8), child: divider),
-              MultiSelectChip(
-                reportList2,
-                onSelectionChanged: (selectedList) {
-                  setState(() {
-                    selectedChoices = selectedList;
-                    print(selectedChoices.toList());
-                  });
-                },
-              ),
-              Padding(padding: const EdgeInsets.all(16), child: divider),
-              RawMaterialButton(
-                onPressed: null,
-                fillColor: kPrimaryColor,
-                textStyle: TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 17),
-                shape: ContinuousRectangleBorder(
-                    borderRadius: BorderRadius.circular(20)),
-                child: Text("Search"),
-              )
-            ],
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                MultiSelectChip(
+                  oppType,
+                  onSelectionChanged: (selectedList) {
+                    setState(() {
+                      selectedOppType = selectedList;
+                      print(selectedOppType.toString());
+                    });
+                  },
+                ),
+                Padding(padding: EdgeInsets.all(8), child: divider),
+                DropDownMenu(
+                  specialtiesItems,
+                  onSelectionChanged: (selectedItem) {
+                    setState(() {
+                      selectedFieldItem = selectedItem;
+                      print(selectedFieldItem);
+                    });
+                  },
+                ),
+                Padding(padding: const EdgeInsets.all(8), child: divider),
+                MultiSelectChip(
+                  fundingType,
+                  onSelectionChanged: (selectedList) {
+                    setState(() {
+                      selectedFundingType = selectedList;
+                      print(selectedFundingType.toList());
+                    });
+                  },
+                ),
+                Padding(padding: const EdgeInsets.all(16), child: divider),
+                RawMaterialButton(
+                  onPressed: () {
+                    setState(() {
+                      Navigator.pop(context);
+                    });
+                  },
+                  fillColor: kPrimaryColor,
+                  textStyle: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 17),
+                  shape: ContinuousRectangleBorder(
+                      borderRadius: BorderRadius.circular(20)),
+                  child: Text("Search"),
+                )
+              ],
+            ),
           ),
         ),
       ),
     );
 
-    _showReportDialog() {
+    _showFilterDialog() {
       showDialog(
-          context: context, builder: (BuildContext context) => errorDialog);
+          context: context, builder: (BuildContext context) => filterDialog);
     }
 
     return Scaffold(
@@ -110,7 +127,7 @@ class _ExploreScreenState extends State<ExploreScreen> {
           IconButton(
               icon: Icon(Icons.filter_list),
               padding: EdgeInsets.only(right: 10),
-              onPressed: () => _showReportDialog()),
+              onPressed: () => _showFilterDialog()),
         ],
       ),
       body: SingleChildScrollView(
@@ -119,12 +136,56 @@ class _ExploreScreenState extends State<ExploreScreen> {
             SizedBox(height: 10),
             OppTypes(),
             SizedBox(height: 10),
-            ...List.generate(opportunityList.length,
-                (index) => OppCard(opportunityList[index])),
+            fetchData(selectedOppType, 'null', selectedFundingType),
             SizedBox(height: size.height * 0.1),
           ],
         ),
       ),
     );
+  }
+
+  Widget fetchData(
+      List<String> oppType, String field, List<String> fundingType) {
+    print('Fetching');
+
+    return StreamBuilder(
+        stream: oppBloc.opportunityList,
+        builder: (context, AsyncSnapshot<List<Opportunity>> snapshot) {
+          if (snapshot.hasData) {
+            final List<Opportunity> filteredData = snapshot.data
+                // .where((element) => element.oppType == oppType)
+                .where((element) => element.specialization.contains(field))
+                .where((element) =>
+                    element.fundType.contains(fundingType.toString()))
+                .toList();
+            print(filteredData.toString());
+            return _buildExplore(filteredData, context);
+          } else if (snapshot.hasError) {
+            return Text(snapshot.error.toString());
+          }
+          return CircularProgressIndicator(backgroundColor: kPrimaryColor);
+        });
+  }
+
+  Widget _buildExplore(List<Opportunity> data, BuildContext context) {
+    print(data.toList());
+    Size size = MediaQuery.of(context).size;
+    return Container(
+      height: size.height * 0.7,
+      child: RefreshIndicator(
+        onRefresh: () => _oppBloc.fetchOpportunities(),
+        color: kPrimaryColor,
+        child: ListView.builder(
+            itemCount: data.length,
+            scrollDirection: Axis.vertical,
+            itemBuilder: (context, index) => OppCard(data[index])),
+      ),
+    );
+  }
+
+  @override
+  void dispose() {
+    _oppBloc.dispose();
+    super.dispose();
   }
 }
