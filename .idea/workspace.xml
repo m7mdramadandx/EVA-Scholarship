@@ -4,32 +4,6 @@
     <list default="true" id="193371d1-6f89-4d27-b5e7-5d2b84c527ae" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/kotlin/com/eva/eva_pharma/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/kotlin/com/eva/eva_pharma/MainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/gondola.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/hotel0.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/hotel1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/hotel2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/murano.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/newdelhi.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/newyork.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/paris.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/santorini.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/saopaulo.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/stmarksbasilica.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/venice.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/blocs/OppBloc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/blocs/OppBloc.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/blocs/SearchBloc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/blocs/SearchBloc.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/blocs/UniversityBloc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/blocs/UniversityBloc.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/models/DataSearch.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/models/DataSearch.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/models/Opportunity.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/models/Opportunity.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/models/University.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/models/University.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ui/screens/DashboardScreen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/screens/DashboardScreen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ui/screens/ExploreScreen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/screens/ExploreScreen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ui/screens/HomeScreen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/screens/HomeScreen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ui/screens/SearchResult.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/screens/SearchResult.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ui/widgets/CustomListView.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/widgets/CustomListView.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ui/widgets/constants.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,6 +43,7 @@
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="add_unversioned_files" value="$PROJECT_DIR$/pubspec.lock" />
     <property name="dart.analysis.tool.window.force.activate" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
@@ -176,22 +151,22 @@
       <screen x="0" y="30" width="1536" height="834" />
     </state>
     <state x="272" y="190" key="FileChooserDialogImpl/0.30.1536.834@0.30.1536.834" timestamp="1601208637752" />
-    <state width="1077" height="210" key="GridCell.Tab.0.bottom" timestamp="1601763239349">
+    <state width="1078" height="210" key="GridCell.Tab.0.bottom" timestamp="1602109707149">
       <screen x="0" y="30" width="1536" height="834" />
     </state>
-    <state width="1077" height="210" key="GridCell.Tab.0.bottom/0.30.1536.834@0.30.1536.834" timestamp="1601763239349" />
-    <state width="1077" height="210" key="GridCell.Tab.0.center" timestamp="1601763239348">
+    <state width="1078" height="210" key="GridCell.Tab.0.bottom/0.30.1536.834@0.30.1536.834" timestamp="1602109707149" />
+    <state width="1078" height="210" key="GridCell.Tab.0.center" timestamp="1602109707148">
       <screen x="0" y="30" width="1536" height="834" />
     </state>
-    <state width="1077" height="210" key="GridCell.Tab.0.center/0.30.1536.834@0.30.1536.834" timestamp="1601763239348" />
-    <state width="1077" height="210" key="GridCell.Tab.0.left" timestamp="1601763239348">
+    <state width="1078" height="210" key="GridCell.Tab.0.center/0.30.1536.834@0.30.1536.834" timestamp="1602109707148" />
+    <state width="1078" height="210" key="GridCell.Tab.0.left" timestamp="1602109707148">
       <screen x="0" y="30" width="1536" height="834" />
     </state>
-    <state width="1077" height="210" key="GridCell.Tab.0.left/0.30.1536.834@0.30.1536.834" timestamp="1601763239348" />
-    <state width="1077" height="210" key="GridCell.Tab.0.right" timestamp="1601763239348">
+    <state width="1078" height="210" key="GridCell.Tab.0.left/0.30.1536.834@0.30.1536.834" timestamp="1602109707148" />
+    <state width="1078" height="210" key="GridCell.Tab.0.right" timestamp="1602109707148">
       <screen x="0" y="30" width="1536" height="834" />
     </state>
-    <state width="1077" height="210" key="GridCell.Tab.0.right/0.30.1536.834@0.30.1536.834" timestamp="1601763239348" />
+    <state width="1078" height="210" key="GridCell.Tab.0.right/0.30.1536.834@0.30.1536.834" timestamp="1602109707148" />
     <state x="145" y="30" key="SettingsEditor" timestamp="1601626836300">
       <screen x="0" y="30" width="1536" height="834" />
     </state>
