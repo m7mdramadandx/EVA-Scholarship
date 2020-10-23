@@ -1,5 +1,5 @@
 # EVA Scholarship
-EVA Scholarship is a simple and awesome opportiunities flutter app. It gives you a quick and simple opportiunity in many forms such as (IB, Bachelor, Master and PHDD) that supports both Devices( Android and IOS Devices).
+EVA Scholarship is a simple and awesome opportunities flutter app. It gives you a quick and simple opportunity in many forms such as (IB, Bachelor, Master and PHD) that supports both Devices( Android and IOS Devices).
 
 ## Built With
 
