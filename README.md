@@ -3,7 +3,7 @@ EVA Scholarship is a simple and awesome opportiunities flutter app. It gives you
 
 ## Built With
 
-Flutter - DArt - Bloc - RestfulAPI 
+Flutter - Dart - Bloc - RestfulAPI 
 
 ## Authors
 
